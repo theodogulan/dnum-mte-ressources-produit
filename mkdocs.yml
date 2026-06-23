@@ -1,0 +1,168 @@
+site_name: Guide DNUM — Ministère de la Transition Écologique
+site_description: Ressources, méthodes et bonnes pratiques de la Direction du Numérique (DNUM) du Ministère de la Transition Écologique (MTE).
+site_author: DNUM du Ministère de la Transition Écologique
+docs_dir: docs
+
+theme:
+  name: material
+  language: fr
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Passer en mode sombre
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Passer en mode clair
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+plugins:
+  - search:
+      lang: fr
+
+nav:
+  - index.md
+  - "Cadrer":
+    - "Piliers d’une organisation produit": cadrer/les-piliers-dune-organisation-produit.md
+    - "Organisation produit": cadrer/organisation-produit.md
+    - "Cycle de vie produit": cadrer/cycle-de-vie-produit.md
+    - "MVP": cadrer/mvp.md
+    - "Comité produit": cadrer/cadre-organisationnel.md
+    - "Equipe produit":
+      - "Equipe produit": cadrer/les-differents-roles-et-metiers.md
+      - "Responsable métier (PM)": cadrer/les-differents-roles-et-metiers/responsable-metier.md
+      - "Responsable produit (PO)": cadrer/les-differents-roles-et-metiers/responsable-produit.md
+      - "Expert en Recherche Utilisateur": cadrer/les-differents-roles-et-metiers/expert-en-recherche-utilisateur.md
+      - "Responsable Data": cadrer/les-differents-roles-et-metiers/responsable-data.md
+      - "Designer": cadrer/les-differents-roles-et-metiers/designer.md
+      - "Développeur": cadrer/les-differents-roles-et-metiers/developpeur.md
+      - "Coach produit": cadrer/les-differents-roles-et-metiers/coach-produit.md
+      - "Expert Ops": cadrer/les-differents-roles-et-metiers/devops.md
+      - "Expert accessibilité": cadrer/les-differents-roles-et-metiers/expert-accessibilite.md
+    - "Au quotidien": cadrer/le-fonctionnement-quotidien.md
+    - "Checklist produit": cadrer/la-check-list-de-lorganisation-produit.md
+    - "Vision produit": cadrer/vision-produit.md
+    - "Roadmap": cadrer/la-roadmap.md
+    - "Matrice RICE": cadrer/matrice-rice.md
+    - "Indicateurs": cadrer/les-indicateurs.md
+    - "Exemples d'indicateurs": cadrer/indicateurs.md
+    - "Procédure d’agrément SIG": cadrer/procedure-agrement-sig.md
+  - "Concevoir":
+    - "Démarche de design":
+      - "Démarche de design": concevoir/concevoir.md
+      - "En-têtes des sites": concevoir/concevoir/representer-son-produit-dans-les-en-tetes-des-sites.md
+      - "IA - Charte d'utilisation responsable": concevoir/concevoir/ia-charte-dutilisation-responsable.md
+    - "Recherche utilisateur": concevoir/ru.md
+    - "Parcours utilisateur": concevoir/parcours-utilisateur.md
+    - "Story mapping": concevoir/story-mapping.md
+    - "Accessibilité": concevoir/accessibilite.md
+    - "Solutions et communs numériques":
+      - "Solutions et communs numériques": concevoir/communs-numeriques.md
+      - "Démarche de rationalisation": concevoir/communs-numeriques/rationalisation.md
+      - "Grist": concevoir/communs-numeriques/communs-grist.md
+      - "Gestion de contenus (CMS)": concevoir/communs-numeriques/communs-cms.md
+      - "Démarche Numérique et Démat Social": concevoir/communs-numeriques/communs-demarche-numerique.md
+      - "Matomo": concevoir/communs-numeriques/communs-matomo-tracking.md
+    - "Eco-conception": concevoir/eco-conception.md
+    - "Authentification des utilisateurs":
+      - "Authentification des utilisateurs": concevoir/authentification.md
+      - "ProConnect": concevoir/authentification/authentification-proconnect.md
+    - "Dossier d'Architecture": concevoir/dossier-architecture.md
+    - "Data":
+      - "Data": concevoir/data.md
+      - "PostgreSQL": concevoir/data/postgresql.md
+      - "ElasticSearch": concevoir/data/elasticsearch.md
+    - "API":
+      - "API": concevoir/api.md
+      - "Conception d'API": concevoir/api/api-design.md
+      - "Exposition d'API": concevoir/api/api-gateway.md
+      - "PISTE": concevoir/api/api-piste.md
+      - "Sécurisation d'API": concevoir/api/api-securite.md
+  - "Développer":
+    - "Cadre de Cohérence Technique":
+      - "Cadre de Cohérence Technique": developper/cct.md
+      - "Standard JDK/JRE": developper/cct/jdk.md
+    - "Checklist projet": developper/checklist-projet.md
+    - "Principes de développement":
+      - "Principes de développement": developper/principes-de-developpement.md
+      - "Clean Code":
+        - "Clean Code": developper/principes-de-developpement/clean-code.md
+        - "Clean Code (TypeScript)": developper/principes-de-developpement/clean-code/clean-code-typescript.md
+      - "Open Source par défaut": developper/principes-de-developpement/open-source.md
+      - "Application cloud native": developper/principes-de-developpement/cloud-native.md
+      - "Traitements asynchrones": developper/principes-de-developpement/processus-asynchrones.md
+      - "Gestion des accès": developper/principes-de-developpement/gestion-des-access.md
+      - "Standards techniques": developper/standards-techniques.md
+    - "Front web":
+      - "Front web": developper/front-web.md
+      - "Accessibilité": developper/front-web/accessibilite.md
+      - "Portages DSFR": developper/front-web/portages-dsfr.md
+      - "Cartographie": developper/front-web/cartographie.md
+    - "Backend":
+      - "Backend": developper/backend.md
+      - "Génération de PDF": developper/backend/generation-pdf.md
+    - "Stratégies de tests":
+      - "Stratégies de tests": developper/tests-et-strategies.md
+      - "Tests de bout en bout": developper/tests-et-strategies/tests-de-bout-en-bout.md
+      - "Tests de performance": developper/tests-et-strategies/tests-de-performance.md
+    - "Anonymisation des données : cadre opérationnel & trajectoire PCN": developper/anonymisation-des-donnees-cadre-operationnel-and-trajectoire-pcn.md
+    - "Intégration continue (CI)": developper/ci.md
+    - "Déploiement continu (CD)": developper/cd.md
+    - "Passation des projets internes": developper/passation.md
+    - "Architecture Decision Records": developper/architecture-decision-record.md
+    - "Résolution de problème": developper/resolution-de-probleme.md
+  - "Déployer":
+    - "Hébergement":
+      - "Hébergement": deployer/hebergement.md
+      - "Gestion du stockage S3 chez CEGEDIM": deployer/hebergement/gestion-du-stockage-s3-chez-cegedim.md
+    - "Sécurité":
+      - "Sécurité": deployer/securite.md
+      - "DICT (EBIOS)": deployer/securite/ebios-dict.md
+      - "Sécurité anti-bots": deployer/securite/anti-bots.md
+      - "Antivirus": deployer/securite/antivirus.md
+      - "Chiffrement des données": deployer/securite/chiffrement.md
+    - "Observabilité":
+      - "Observabilité": deployer/observabilite.md
+      - "Métriques de performance applicative (APM)": deployer/observabilite/metriques-de-performance-applicative-apm.md
+      - "Sentry": deployer/observabilite/documentation-sentry.md
+    - "Conduite du changement":
+      - "Conduite du changement": deployer/conduire-le-changement.md
+      - "Communiquer et promouvoir": deployer/conduire-le-changement/communication-promotion.md
+      - "Formation": deployer/conduire-le-changement/formation.md
+      - "Aide au démarrage": deployer/conduire-le-changement/aide-au-demarrage.md
+      - "Mesurer la satisfaction avec le bouton JDMA": deployer/conduire-le-changement/mesurer-la-satisfaction-avec-le-bouton-jdma.md
+      - "Support utilisateur": deployer/conduire-le-changement/support-utilisateur.md
+  - "Aide":
+    - "Etre accompagné":
+      - "Etre accompagné": aide/etre-accompagne.md
+      - "Accompagnement technique": aide/etre-accompagne/accompagnement-technique.md
+    - "Contribuer au guide": aide/contribuer.md

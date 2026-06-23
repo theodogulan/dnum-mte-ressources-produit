@@ -1,0 +1,32 @@
+# Application cloud native
+
+Il s'agit d'une application qui suit les principes et prérequis pour pouvoir être déployée sur un cloud :
+
+* [12-factor app](https://12factor.net/fr/)
+* [15 factors](https://developer.ibm.com/articles/15-factor-applications/#the-additional-factors-and-why-they-are-important1)
+
+## Application conteneurisée
+
+* L'application doit être livrée via des images Docker en suivant ces recommandations internes DNUM
+* En local, l'environnement de développement complet doit utiliser [Docker Compose](https://docs.docker.com/compose/). Le lancement complet de l'environnement doit se faire par un simple `docker compose up`
+  * Se référer à la page de la [checklist de projet](../checklist-projet.md) pour le prérequis d'instanciation de l'environnement local.
+* En intégration / préproduction / production, la priorité est donnée au déploiement sur un cluster [Kubernetes](https://kubernetes.io/fr/). À défaut, Docker Compose doit être utilisé si le déploiement se fait sur des VM
+
+## Migrations de données réversibles
+
+C'est indispensable pour pouvoir redéployer une ancienne version (rollback).
+
+## Pré-requis de l'équipe technique produit
+
+* Gestion de configuration et définition claire de la gestion des branches git (feature, intégration, preproduction)
+* Les tags sont utilisés pour la production
+* Validation par les pairs lors de revue de code (merge/pull request)
+* Refactoring en continu pour limiter la dette technique
+* Homogénéisation des pratiques au sein de l'organisation (facilite la réversibilité interne)
+* Cadre de Cohérence Technique
+
+## Ressources
+
+* Formation Kubernetes : <https://container.training>
+
+---

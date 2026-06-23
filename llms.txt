@@ -1,0 +1,110 @@
+# Guide DNUM
+
+## Ressources
+
+- [Bienvenue](https://dnum-ministeres-sociaux.gitbook.io/ressources/readme.md)
+- [Piliers d’une organisation produit](https://dnum-ministeres-sociaux.gitbook.io/ressources/cadrer/les-piliers-dune-organisation-produit.md)
+- [Organisation produit](https://dnum-ministeres-sociaux.gitbook.io/ressources/cadrer/organisation-produit.md)
+- [Cycle de vie produit](https://dnum-ministeres-sociaux.gitbook.io/ressources/cadrer/cycle-de-vie-produit.md)
+- [Comité produit](https://dnum-ministeres-sociaux.gitbook.io/ressources/cadrer/cadre-organisationnel.md)
+- [Equipe produit](https://dnum-ministeres-sociaux.gitbook.io/ressources/cadrer/les-differents-roles-et-metiers.md): Une équipe pluridisciplinaire qui partage la vision produit, réalise sa conception, met en place son développement et le suit au cours de son cycle de vie.
+- [Responsable métier (PM)](https://dnum-ministeres-sociaux.gitbook.io/ressources/cadrer/les-differents-roles-et-metiers/responsable-metier.md)
+- [Responsable produit (PO)](https://dnum-ministeres-sociaux.gitbook.io/ressources/cadrer/les-differents-roles-et-metiers/responsable-produit.md)
+- [Expert en Recherche Utilisateur](https://dnum-ministeres-sociaux.gitbook.io/ressources/cadrer/les-differents-roles-et-metiers/expert-en-recherche-utilisateur.md)
+- [Responsable Data](https://dnum-ministeres-sociaux.gitbook.io/ressources/cadrer/les-differents-roles-et-metiers/responsable-data.md)
+- [Designer](https://dnum-ministeres-sociaux.gitbook.io/ressources/cadrer/les-differents-roles-et-metiers/designer.md)
+- [Développeur](https://dnum-ministeres-sociaux.gitbook.io/ressources/cadrer/les-differents-roles-et-metiers/developpeur.md)
+- [Coach produit](https://dnum-ministeres-sociaux.gitbook.io/ressources/cadrer/les-differents-roles-et-metiers/coach-produit.md)
+- [Expert Ops](https://dnum-ministeres-sociaux.gitbook.io/ressources/cadrer/les-differents-roles-et-metiers/devops.md)
+- [Expert accessibilité](https://dnum-ministeres-sociaux.gitbook.io/ressources/cadrer/les-differents-roles-et-metiers/expert-accessibilite.md)
+- [Au quotidien](https://dnum-ministeres-sociaux.gitbook.io/ressources/cadrer/le-fonctionnement-quotidien.md)
+- [Checklist produit](https://dnum-ministeres-sociaux.gitbook.io/ressources/cadrer/la-check-list-de-lorganisation-produit.md)
+- [Vision produit](https://dnum-ministeres-sociaux.gitbook.io/ressources/cadrer/vision-produit.md)
+- [Roadmap](https://dnum-ministeres-sociaux.gitbook.io/ressources/cadrer/la-roadmap.md)
+- [Indicateurs](https://dnum-ministeres-sociaux.gitbook.io/ressources/cadrer/les-indicateurs.md)
+- [Exemples d'indicateurs](https://dnum-ministeres-sociaux.gitbook.io/ressources/cadrer/indicateurs.md)
+- [Procédure d’agrément SIG](https://dnum-ministeres-sociaux.gitbook.io/ressources/cadrer/procedure-agrement-sig.md)
+- [Démarche de design](https://dnum-ministeres-sociaux.gitbook.io/ressources/concevoir/concevoir.md): Un service conçu avec soin renforce la confiance, réduit la charge de formation ou de support et améliore la satisfaction de toutes les parties prenantes.
+- [En-têtes des sites](https://dnum-ministeres-sociaux.gitbook.io/ressources/concevoir/concevoir/representer-son-produit-dans-les-en-tetes-des-sites.md): Règles d'usages pour représenter son produit dans l'en-tête du site, utiliser le bloc-marque du ministère ou le bloc-marque République Française et un logotype.
+- [IA - Charte d'utilisation responsable](https://dnum-ministeres-sociaux.gitbook.io/ressources/concevoir/concevoir/ia-charte-dutilisation-responsable.md): Lorsque du contenu généré par l'IA est publié pour les citoyens, son utilisation doit être clairement indiquée.
+- [Recherche utilisateur](https://dnum-ministeres-sociaux.gitbook.io/ressources/concevoir/ru.md): Observer et comprendre les besoins, motivations et contraintes des usagers et des agents afin de proposer des parcours adaptés et inclusifs
+- [Accessibilité](https://dnum-ministeres-sociaux.gitbook.io/ressources/concevoir/accessibilite.md)
+- [Solutions et communs numériques](https://dnum-ministeres-sociaux.gitbook.io/ressources/concevoir/communs-numeriques.md)
+- [Démarche de rationalisation](https://dnum-ministeres-sociaux.gitbook.io/ressources/concevoir/communs-numeriques/rationalisation.md)
+- [Grist](https://dnum-ministeres-sociaux.gitbook.io/ressources/concevoir/communs-numeriques/communs-grist.md)
+- [Gestion de contenus (CMS)](https://dnum-ministeres-sociaux.gitbook.io/ressources/concevoir/communs-numeriques/communs-cms.md)
+- [Démarche Numérique et Démat Social](https://dnum-ministeres-sociaux.gitbook.io/ressources/concevoir/communs-numeriques/communs-demarche-numerique.md)
+- [Matomo](https://dnum-ministeres-sociaux.gitbook.io/ressources/concevoir/communs-numeriques/communs-matomo-tracking.md)
+- [Eco-conception](https://dnum-ministeres-sociaux.gitbook.io/ressources/concevoir/eco-conception.md)
+- [Authentification des utilisateurs](https://dnum-ministeres-sociaux.gitbook.io/ressources/concevoir/authentification.md)
+- [ProConnect](https://dnum-ministeres-sociaux.gitbook.io/ressources/concevoir/authentification/authentification-proconnect.md)
+- [Pro Santé Connect](https://dnum-ministeres-sociaux.gitbook.io/ressources/concevoir/authentification/authentification-pro-sante-connect.md)
+- [Plage / Pasrel](https://dnum-ministeres-sociaux.gitbook.io/ressources/concevoir/authentification/authentification-plage-pasrel.md)
+- [Dossier d'Architecture](https://dnum-ministeres-sociaux.gitbook.io/ressources/concevoir/dossier-architecture.md)
+- [Data](https://dnum-ministeres-sociaux.gitbook.io/ressources/concevoir/data.md)
+- [PostgreSQL](https://dnum-ministeres-sociaux.gitbook.io/ressources/concevoir/data/postgresql.md)
+- [ElasticSearch](https://dnum-ministeres-sociaux.gitbook.io/ressources/concevoir/data/elasticsearch.md)
+- [API](https://dnum-ministeres-sociaux.gitbook.io/ressources/concevoir/api.md)
+- [Conception d'API](https://dnum-ministeres-sociaux.gitbook.io/ressources/concevoir/api/api-design.md)
+- [Exposition d'API](https://dnum-ministeres-sociaux.gitbook.io/ressources/concevoir/api/api-gateway.md)
+- [PISTE](https://dnum-ministeres-sociaux.gitbook.io/ressources/concevoir/api/api-piste.md)
+- [Sécurisation d'API](https://dnum-ministeres-sociaux.gitbook.io/ressources/concevoir/api/api-securite.md)
+- [Cadre de Cohérence Technique](https://dnum-ministeres-sociaux.gitbook.io/ressources/developper/cct.md)
+- [Standard JDK/JRE](https://dnum-ministeres-sociaux.gitbook.io/ressources/developper/cct/jdk.md)
+- [Checklist projet](https://dnum-ministeres-sociaux.gitbook.io/ressources/developper/checklist-projet.md)
+- [Principes de développement](https://dnum-ministeres-sociaux.gitbook.io/ressources/developper/principes-de-developpement.md)
+- [Clean Code](https://dnum-ministeres-sociaux.gitbook.io/ressources/developper/principes-de-developpement/clean-code.md)
+- [Clean Code (TypeScript)](https://dnum-ministeres-sociaux.gitbook.io/ressources/developper/principes-de-developpement/clean-code/clean-code-typescript.md)
+- [Open Source par défaut](https://dnum-ministeres-sociaux.gitbook.io/ressources/developper/principes-de-developpement/open-source.md)
+- [Application cloud native](https://dnum-ministeres-sociaux.gitbook.io/ressources/developper/principes-de-developpement/cloud-native.md)
+- [Traitements asynchrones](https://dnum-ministeres-sociaux.gitbook.io/ressources/developper/principes-de-developpement/processus-asynchrones.md)
+- [Gestion des accès](https://dnum-ministeres-sociaux.gitbook.io/ressources/developper/principes-de-developpement/gestion-des-access.md)
+- [Front web](https://dnum-ministeres-sociaux.gitbook.io/ressources/developper/front-web.md)
+- [Accessibilité](https://dnum-ministeres-sociaux.gitbook.io/ressources/developper/front-web/accessibilite.md)
+- [Portages DSFR](https://dnum-ministeres-sociaux.gitbook.io/ressources/developper/front-web/portages-dsfr.md)
+- [Cartographie](https://dnum-ministeres-sociaux.gitbook.io/ressources/developper/front-web/cartographie.md)
+- [Backend](https://dnum-ministeres-sociaux.gitbook.io/ressources/developper/backend.md)
+- [Génération de PDF](https://dnum-ministeres-sociaux.gitbook.io/ressources/developper/backend/generation-pdf.md)
+- [Stratégies de tests](https://dnum-ministeres-sociaux.gitbook.io/ressources/developper/tests-et-strategies.md)
+- [Tests de bout en bout](https://dnum-ministeres-sociaux.gitbook.io/ressources/developper/tests-et-strategies/tests-de-bout-en-bout.md): Aussi nommés tests end-to-end, ou e2e.
+- [Tests de performance](https://dnum-ministeres-sociaux.gitbook.io/ressources/developper/tests-et-strategies/tests-de-performance.md)
+- [Anonymisation des données : cadre opérationnel & trajectoire PCN](https://dnum-ministeres-sociaux.gitbook.io/ressources/developper/anonymisation-des-donnees-cadre-operationnel-and-trajectoire-pcn.md): Cette page a pour objectif d’apporter un cadre commun, simple et actionnable, sur la manière d’aborder l’anonymisation des données dans les bases de données applicatives.
+- [Intégration continue (CI)](https://dnum-ministeres-sociaux.gitbook.io/ressources/developper/ci.md)
+- [Déploiement continu (CD)](https://dnum-ministeres-sociaux.gitbook.io/ressources/developper/cd.md)
+- [Passation des projets internes](https://dnum-ministeres-sociaux.gitbook.io/ressources/developper/passation.md)
+- [Architecture Decision Records](https://dnum-ministeres-sociaux.gitbook.io/ressources/developper/architecture-decision-record.md)
+- [Hébergement](https://dnum-ministeres-sociaux.gitbook.io/ressources/deployer/hebergement.md)
+- [Gestion du stockage S3 chez CEGEDIM](https://dnum-ministeres-sociaux.gitbook.io/ressources/deployer/hebergement/gestion-du-stockage-s3-chez-cegedim.md)
+- [Sécurité](https://dnum-ministeres-sociaux.gitbook.io/ressources/deployer/securite.md)
+- [DICT (EBIOS)](https://dnum-ministeres-sociaux.gitbook.io/ressources/deployer/securite/ebios-dict.md)
+- [Sécurité anti-bots](https://dnum-ministeres-sociaux.gitbook.io/ressources/deployer/securite/anti-bots.md)
+- [Antivirus](https://dnum-ministeres-sociaux.gitbook.io/ressources/deployer/securite/antivirus.md)
+- [Chiffrement des données](https://dnum-ministeres-sociaux.gitbook.io/ressources/deployer/securite/chiffrement.md)
+- [Observabilité](https://dnum-ministeres-sociaux.gitbook.io/ressources/deployer/observabilite.md)
+- [Métriques de performance applicative (APM)](https://dnum-ministeres-sociaux.gitbook.io/ressources/deployer/observabilite/metriques-de-performance-applicative-apm.md)
+- [Sentry](https://dnum-ministeres-sociaux.gitbook.io/ressources/deployer/observabilite/documentation-sentry.md)
+- [Conduite du changement](https://dnum-ministeres-sociaux.gitbook.io/ressources/deployer/conduire-le-changement.md): (Faire vivre le produit)
+- [Communiquer et promouvoir](https://dnum-ministeres-sociaux.gitbook.io/ressources/deployer/conduire-le-changement/communication-promotion.md)
+- [Formation](https://dnum-ministeres-sociaux.gitbook.io/ressources/deployer/conduire-le-changement/formation.md)
+- [Aide au démarrage](https://dnum-ministeres-sociaux.gitbook.io/ressources/deployer/conduire-le-changement/aide-au-demarrage.md)
+- [Mesurer la satisfaction avec le bouton JDMA](https://dnum-ministeres-sociaux.gitbook.io/ressources/deployer/conduire-le-changement/mesurer-la-satisfaction-avec-le-bouton-jdma.md): Pourquoi l'utiliser, les questions posées, comment et où placer le bouton Je Donne Mon Avis sur nos sites et produits.
+- [Support utilisateur](https://dnum-ministeres-sociaux.gitbook.io/ressources/deployer/conduire-le-changement/support-utilisateur.md)
+- [Etre accompagné](https://dnum-ministeres-sociaux.gitbook.io/ressources/aide/etre-accompagne.md)
+- [Accompagnement technique](https://dnum-ministeres-sociaux.gitbook.io/ressources/aide/etre-accompagne/accompagnement-technique.md)
+- [Contribuer au guide](https://dnum-ministeres-sociaux.gitbook.io/ressources/aide/contribuer.md)
+
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information, you can query the documentation dynamically by asking a question.
+Perform an HTTP GET request on a page URL with the `ask` query parameter:
+```
+GET https://dnum-ministeres-sociaux.gitbook.io/ressources/readme.md?ask=<question>
+```
+The question should be specific, self-contained, and written in natural language.
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.
