@@ -174,10 +174,28 @@
   color: var(--md-primary-fg-color);
 }
 
-/* Titres de section dans la sidebar (navigation.sections) : plus distincts. */
+/* En-têtes de groupe dans la sidebar (navigation.sections) : traités comme des
+   intertitres « overline » — capitales, petits, espacés, avec un filet de
+   séparation — pour les distinguer nettement des liens de page cliquables. */
 .md-nav__item--section > .md-nav__link {
+  text-transform: uppercase;
+  font-size: 0.62rem;
   font-weight: 700;
-  color: var(--md-default-fg-color);
+  letter-spacing: 0.07em;
+  color: var(--md-default-fg-color--light);
+  margin-top: 1.5rem;
+  margin-bottom: 0.2rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  cursor: default;
+}
+/* Le premier groupe d'un onglet n'a pas besoin d'un grand espace au-dessus. */
+.md-nav--primary .md-nav__list > .md-nav__item--section:first-child > .md-nav__link {
+  margin-top: 0.4rem;
+}
+/* Les liens de page sont légèrement décalés sous leur en-tête de groupe. */
+.md-nav__item--section > .md-nav__list .md-nav__link {
+  font-size: 0.78rem;
 }
 
 /* -------------------------------------------------------------------------
