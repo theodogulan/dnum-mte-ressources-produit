@@ -1,0 +1,228 @@
+/* =========================================================================
+   DNUM MTE — personnalisation Material, alignée DSFR (Système de Design de l'État)
+   Tout est non destructif : aucune modification de contenu ni d'URL.
+   ========================================================================= */
+
+/* -------------------------------------------------------------------------
+   P2 — Police Marianne (officielle, self-hostée depuis le paquet DSFR)
+   ------------------------------------------------------------------------- */
+@font-face {
+  font-family: "Marianne";
+  src: url("../assets/fonts/Marianne-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Marianne";
+  src: url("../assets/fonts/Marianne-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Marianne";
+  src: url("../assets/fonts/Marianne-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --md-text-font: "Marianne", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --md-code-font: ui-monospace, "SFMono-Regular", "Cascadia Code", "Consolas", monospace;
+}
+
+/* -------------------------------------------------------------------------
+   P0 — Palette DSFR « Bleu France »
+   #000091 sur blanc = contraste ~15:1 (WCAG AAA).
+   ------------------------------------------------------------------------- */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color:        #000091;  /* Bleu France */
+  --md-primary-fg-color--light: #6a6af4;
+  --md-primary-fg-color--dark:  #00006e;
+  --md-primary-bg-color:        #ffffff;
+  --md-primary-bg-color--light: #ffffff;
+
+  --md-accent-fg-color:         #e1000f;  /* Rouge Marianne, pour les états interactifs */
+  --md-accent-fg-color--transparent: rgba(225, 0, 15, 0.1);
+
+  /* Liens : bleu France, fort contraste */
+  --md-typeset-a-color:         #000091;
+}
+
+/* Mode sombre : le bleu France pur est trop foncé sur fond sombre,
+   on remonte vers un bleu lisible (équivalent DSFR « blue-france-main-525 »). */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color:        #8585f6;
+  --md-primary-fg-color--light: #b1b1f9;
+  --md-primary-fg-color--dark:  #313178;
+  --md-accent-fg-color:         #ff6f6f;
+  --md-typeset-a-color:         #8585f6;
+}
+
+/* -------------------------------------------------------------------------
+   P0 — Typographie & lisibilité
+   Mesure de lecture ~70ch, interligne resserré, échelle de titres calmée.
+   ------------------------------------------------------------------------- */
+
+/* Largeur de lecture confortable (~70 caractères) pour le corps de texte.
+   Les blocs de code et tableaux peuvent déborder grâce à leur défilement. */
+.md-content__inner {
+  max-width: 46rem;          /* ≈ 70ch en Marianne 16px */
+  margin-inline: auto;
+}
+
+/* Corps de texte : interligne resserré, rythme vertical plus dense. */
+.md-typeset {
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+
+.md-typeset p,
+.md-typeset li {
+  line-height: 1.55;
+}
+
+/* Échelle de titres resserrée et hiérarchie plus nette. */
+.md-typeset h1 {
+  font-size: 1.85rem;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.8em;
+}
+.md-typeset h2 {
+  font-size: 1.35rem;
+  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: -0.005em;
+  margin-top: 2em;
+}
+.md-typeset h3 {
+  font-size: 1.1rem;
+  line-height: 1.35;
+  font-weight: 600;
+  margin-top: 1.6em;
+}
+.md-typeset h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* Liens du corps : soulignés au survol uniquement, pour ne pas surcharger. */
+.md-typeset a {
+  text-decoration: none;
+}
+.md-typeset a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+/* -------------------------------------------------------------------------
+   P0 — Accessibilité : focus visible (exigence RGAA)
+   ------------------------------------------------------------------------- */
+:focus-visible {
+  outline: 3px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+/* Le champ de recherche et les liens de nav gardent un focus net. */
+.md-search__input:focus,
+.md-nav__link:focus-visible {
+  outline: 3px solid var(--md-accent-fg-color);
+  outline-offset: 1px;
+}
+
+/* -------------------------------------------------------------------------
+   P1 — Header & onglets
+   ------------------------------------------------------------------------- */
+
+/* Bandeau : bleu France plein, texte blanc. */
+.md-header {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Barre d'onglets : séparée visuellement du bandeau principal. */
+.md-tabs {
+  background-color: var(--md-primary-fg-color--dark);
+}
+.md-tabs__link {
+  opacity: 0.9;
+  font-weight: 500;
+}
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  opacity: 1;
+  font-weight: 700;
+}
+
+/* Champ de recherche : affordance plus marquée. */
+.md-search__form {
+  border-radius: 4px;
+}
+
+/* -------------------------------------------------------------------------
+   P1 — Sidebar : état actif plus lisible
+   ------------------------------------------------------------------------- */
+.md-nav__link--active,
+.md-nav__item .md-nav__link--active {
+  font-weight: 700;
+  color: var(--md-primary-fg-color);
+}
+[data-md-color-scheme="default"] .md-nav__link--active {
+  color: var(--md-primary-fg-color);
+}
+
+/* Titres de section dans la sidebar (navigation.sections) : plus distincts. */
+.md-nav__item--section > .md-nav__link {
+  font-weight: 700;
+  color: var(--md-default-fg-color);
+}
+
+/* -------------------------------------------------------------------------
+   P2 — Fil d'Ariane (breadcrumb), injecté via overrides/main.html
+   ------------------------------------------------------------------------- */
+.md-breadcrumbs {
+  max-width: 46rem;
+  margin: 0 auto 0.6rem;
+  padding-top: 0.4rem;
+  font-size: 0.7rem;
+  color: var(--md-default-fg-color--light);
+}
+.md-breadcrumbs__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.4rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.md-breadcrumbs__item {
+  display: inline-flex;
+  align-items: center;
+}
+.md-breadcrumbs__item:not(:last-child)::after {
+  content: "›";
+  margin-left: 0.4rem;
+  color: var(--md-default-fg-color--lighter);
+}
+.md-breadcrumbs__link {
+  color: var(--md-default-fg-color--light);
+  text-decoration: none;
+}
+.md-breadcrumbs__link:hover {
+  color: var(--md-primary-fg-color);
+  text-decoration: underline;
+}
+.md-breadcrumbs__item--current {
+  color: var(--md-default-fg-color);
+  font-weight: 600;
+}
+
+/* Sur très petits écrans, on masque le fil d'Ariane pour préserver l'espace. */
+@media screen and (max-width: 44.9375em) {
+  .md-breadcrumbs {
+    display: none;
+  }
+}
