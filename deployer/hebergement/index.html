@@ -4139,10 +4139,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#quel-hebergement-cloud-pour-quel-cas-dusage" class="md-nav__link">
+  <a href="#quel-hebergement-pour-quel-cas-dusage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Quel hébergement cloud pour quel cas d'usage ?
+        Quel hébergement pour quel cas d'usage ?
       
     </span>
   </a>
@@ -4165,17 +4165,6 @@
     <span class="md-ellipsis">
       
         Interconnexions sécurisées
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notes-sur-hds" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Notes sur HDS
       
     </span>
   </a>
@@ -5053,10 +5042,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#quel-hebergement-cloud-pour-quel-cas-dusage" class="md-nav__link">
+  <a href="#quel-hebergement-pour-quel-cas-dusage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Quel hébergement cloud pour quel cas d'usage ?
+        Quel hébergement pour quel cas d'usage ?
       
     </span>
   </a>
@@ -5085,17 +5074,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#notes-sur-hds" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Notes sur HDS
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -5116,9 +5094,9 @@
 <h1 id="hebergement">Hébergement<a class="headerlink" href="#hebergement" title="Permanent link">&para;</a></h1>
 <p>La stratégie cloud de la DNUM répond aux enjeux suivants :</p>
 <ul>
-<li>La modernisation de l’action publique implique des services fluides et performants</li>
+<li>La modernisation de l'action publique implique des services fluides et performants</li>
 <li>Le cloud facilite l'agilité, les pratiques DevOps et l'usage de technologies modernes</li>
-<li>Le cloud est l'hébergement par défaut dans la doctrine <a href="https://www.numerique.gouv.fr/offre-accompagnement/cloud-administrations/la-doctrine-de-l%C3%A9tat/">cloud au centre</a> de l’Etat</li>
+<li>Le cloud est l'hébergement par défaut dans la doctrine <a href="https://www.numerique.gouv.fr/offre-accompagnement/cloud-administrations/la-doctrine-de-l%C3%A9tat/">cloud au centre</a> de l'État</li>
 </ul>
 <h2 id="grands-principes">Grands principes<a class="headerlink" href="#grands-principes" title="Permanent link">&para;</a></h2>
 <ul>
@@ -5127,34 +5105,33 @@
 <li>transformation des architectures applicatives (cloud native, 12 factors)</li>
 <li>ré-organisation des équipes (DevOps, CI/CD, tests automatisés)</li>
 <li>optimisation financière (FinOps) et environnementale (RGESN, GreenOps)</li>
-<li>Privilégier l’utilisation des fonctionnalités natives des fournisseurs de cloud</li>
-<li>privilégier le SaaS si la souveraineté et le coût le permettent; sinon</li>
-<li>privilégier le PaaS au CaaS (<em>sans raison évidente, le PaaS ne fait pas partie de la stratégie DNUM à l'heure actuelle</em>)</li>
+<li>Privilégier l'utilisation des fonctionnalités natives des fournisseurs de cloud :</li>
+<li>privilégier le SaaS si la souveraineté et le coût le permettent ; sinon</li>
+<li>privilégier le PaaS au CaaS</li>
 <li>privilégier le CaaS au IaaS</li>
 <li>Les nouvelles applications (incluant les refontes) vont par défaut dans le cloud</li>
-<li>l’hébergement interne est réservé aux périmètres non cloudifiables, mais suivent a minima une logique de conteneurisation</li>
-<li>la bascule « telle quelle » est limitée aux cas extrêmes (ex : migration de masse avant fermeture de DC)</li>
+<li>l'hébergement interne est réservé aux périmètres non cloudifiables, mais suit a minima une logique de conteneurisation</li>
+<li>la bascule « telle quelle » est limitée aux cas extrêmes (ex : migration de masse avant fermeture de datacenter)</li>
 </ul>
-<h2 id="quel-hebergement-cloud-pour-quel-cas-dusage">Quel hébergement cloud pour quel cas d'usage ?<a class="headerlink" href="#quel-hebergement-cloud-pour-quel-cas-dusage" title="Permanent link">&para;</a></h2>
-<p>3 offres de cloud sont déployées en plus de l'intranet Rosny/Duquesne :</p>
+<h2 id="quel-hebergement-pour-quel-cas-dusage">Quel hébergement pour quel cas d'usage ?<a class="headerlink" href="#quel-hebergement-pour-quel-cas-dusage" title="Permanent link">&para;</a></h2>
+<p>Trois niveaux d'offres cloud sont disponibles, selon la sensibilité des données :</p>
 <ul>
 <li><strong>Cloud générique (Atlas\@OVH)</strong> : applications sans contrainte réglementaire spécifique</li>
-<li><strong>Cloud HDS (auj. Cegedim, demain Atlas\@OVH-HDS)</strong> : applications manipulant des données de santé et nécessitant une <a href="https://esante.gouv.fr/produits-services/hds">certification HDS</a> de l'hébergement et/ou de l'infogérance</li>
-<li><strong>Cloud de confiance (Atlas\@OVH-SecNumCloud)</strong> : applications manipulant des données particulièrement sensibles, y compris celles contenant des données de santé sensibles, nécessitant une qualification <a href="https://cyber.gouv.fr/secnumcloud-pour-les-fournisseurs-de-services-cloud">SecNumCloud par l'ANSSI</a>. Les données sont <strong>particulièrement sensibles</strong> lorsqu'elles réunissent deux conditions :</li>
-<li>elles doivent être sensibles soit par nature (parce qu’identifiées comme un secret légal) soit du fait de leur emploi (parce qu’impliquées dans une mission essentielle de l’État)</li>
-<li>leur violation aurait pour conséquence une atteinte à l’ordre public, la sécurité publique, la santé, la vie des personnes ou la propriété intellectuelle.</li>
+<li><strong>Cloud de confiance (Atlas\@OVH-SecNumCloud)</strong> : applications manipulant des données particulièrement sensibles, nécessitant une qualification <a href="https://cyber.gouv.fr/secnumcloud-pour-les-fournisseurs-de-services-cloud">SecNumCloud par l'ANSSI</a>. Les données sont <strong>particulièrement sensibles</strong> lorsqu'elles réunissent deux conditions :</li>
+<li>elles doivent être sensibles soit par nature (parce qu'identifiées comme un secret légal) soit du fait de leur emploi (parce qu'impliquées dans une mission essentielle de l'État)</li>
+<li>leur violation aurait pour conséquence une atteinte à l'ordre public, la sécurité publique ou la vie des personnes</li>
+<li><strong>Hébergement interne</strong> : [À COMPLÉTER — préciser le ou les datacenters du MTE et les cas d'usage réservés]</li>
 </ul>
-<p>_Les "clouds internes" de l'Etat ne sont pas ou peu utilisés aux Ministère de la Transition Écologique :</p>
-<ul>
-<li>Pas besoin du niveau "diffusion restreinte" du cloud Pi (MININT)</li>
-<li>Offre SecNumCloud d'OVH préférée au cloud Nubo (DGFIP) : coût élevé, pas prévu pour les petits déploiements_</li>
-</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Les "clouds internes" de l'État (cloud Pi du MININT, cloud Nubo de la DGFIP) ne sont pas ou peu utilisés au MTE : coûts élevés, pas adaptés aux petits déploiements. L'offre SecNumCloud d'OVH est préférée pour les usages hautement sécurisés.</p>
+</div>
 <h2 id="caracteristiques-des-plateformes-dhebergement">Caractéristiques des plateformes d'hébergement<a class="headerlink" href="#caracteristiques-des-plateformes-dhebergement" title="Permanent link">&para;</a></h2>
-<p>Connaitre ses caractéristiques permet de mieux choisir et anticiper l'atterrissage sur la plateforme appropriée. Les hébergement se distinguent par Dans le détail, les hébergements historiques et modernes ont des caractéristiques différentes. :</p>
+<p>Connaître leurs caractéristiques permet de mieux choisir et d'anticiper l'atterrissage sur la plateforme appropriée. Les hébergements se distinguent par :</p>
 <ul>
-<li>les services d’infrastructure qu'ils proposent (stockage managé, middlewares, mécanismes de sécurité natifs). Vu des produits numériques déployés, les services peuvent être optionnelles ou systématiques.</li>
+<li>les services d'infrastructure qu'ils proposent (stockage managé, middlewares, mécanismes de sécurité natifs)</li>
 <li>leurs modes d'exploitation (infogérance, CI/CD)</li>
-<li>les exigences réglementaires auxquelles elles répondent (HDS, SecNumCloud)</li>
+<li>les exigences réglementaires auxquelles ils répondent (SecNumCloud, EBIOS)</li>
 </ul>
 <table>
 <thead>
@@ -5163,8 +5140,6 @@
 <th>Type d'infra</th>
 <th>BDD managé</th>
 <th>S3 managé</th>
-<th>HDS Hébergeur</th>
-<th>HDS Infogéreur</th>
 <th>SecNumCloud</th>
 <th>EBIOS max</th>
 <th>Antivirus ICAP</th>
@@ -5176,8 +5151,6 @@
 <td>CaaS</td>
 <td>✅</td>
 <td>✅</td>
-<td>✅</td>
-<td>❌</td>
 <td>❌</td>
 <td>2-3-3-3</td>
 <td>❌</td>
@@ -5188,95 +5161,28 @@
 <td>❌</td>
 <td>❌</td>
 <td>✅</td>
-<td>❌</td>
-<td>✅</td>
 <td>4-3-3-3</td>
 <td>❌</td>
 </tr>
 <tr>
-<td><strong>Cegedim HDS</strong></td>
-<td>CaaS/IaaS</td>
-<td>✅</td>
-<td>✅</td>
-<td>✅</td>
-<td>✅</td>
-<td>✅</td>
-<td>4-3-3-3</td>
-<td>✅</td>
-</tr>
-<tr>
-<td><strong>Rosny (Travail)</strong></td>
-<td>CaaS/IaaS</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>↔️</td>
-<td>4-3-3-3</td>
-<td>✅</td>
-</tr>
-<tr>
-<td><strong>Duquesne (Santé)</strong></td>
-<td>CaaS/IaaS</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
-<td>↔️</td>
-<td>4-3-3-3</td>
-<td>✅</td>
+<td><strong>Hébergement interne MTE</strong></td>
+<td>[À COMPLÉTER]</td>
+<td>[À COMPLÉTER]</td>
+<td>[À COMPLÉTER]</td>
+<td>[À COMPLÉTER]</td>
+<td>[À COMPLÉTER]</td>
+<td>[À COMPLÉTER]</td>
 </tr>
 </tbody>
 </table>
 <p>Précisions :</p>
 <ul>
 <li>OVH propose un S3 standard et un S3 haute-performance</li>
-<li>Préférer le stockage objet (ex : S3) au stockage en bloc persistant (ex : SAN), qui n'est pas toujours disponible et pas approprié à un hébergement cloud.</li>
-<li>Aujourd'hui OVH-SNC n'accueille que Champollion mais a vocation à devenir l'hébergement hautement sécurisé du ministère</li>
+<li>Préférer le stockage objet (ex : S3) au stockage en bloc persistant (ex : SAN), qui n'est pas toujours disponible et pas approprié à un hébergement cloud</li>
+<li>Atlas\@OVH-SNC a vocation à devenir l'hébergement hautement sécurisé de référence</li>
 </ul>
 <h2 id="interconnexions-securisees">Interconnexions sécurisées<a class="headerlink" href="#interconnexions-securisees" title="Permanent link">&para;</a></h2>
-<p>Voici les interconnexions sécurisées entre les principaux hébergements :</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Atlas\@OVH v2</th>
-<th>Cegedim</th>
-<th>Rosny/Duquesne</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Cegedim</strong></td>
-<td>❌</td>
-<td>n/a</td>
-<td>✅ VPN</td>
-</tr>
-<tr>
-<td><strong>Rosny/Duquesne</strong></td>
-<td>✅ VPN</td>
-<td>✅ VPN</td>
-<td>✅ RIE</td>
-</tr>
-<tr>
-<td><strong>Atlas\@OVH-SNC</strong></td>
-<td>✅ VPN</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-</tbody>
-</table>
-<h2 id="notes-sur-hds">Notes sur HDS<a class="headerlink" href="#notes-sur-hds" title="Permanent link">&para;</a></h2>
-<ul>
-<li>HDS est une norme qui comprend 6 niveaux d'activité, du stockage de la donnée à l'infogérance de l'application</li>
-<li>HDS vs SecNumCloud :</li>
-<li>HDS et SecNumCloud ont évolué séparément, sans concertation. D'où la difficulté parfois de positionner l'un et l'autre.</li>
-<li>Etre SecNumCloud ne veut pas dire être HDS, et inversement</li>
-<li>HDS n'a pas de notion de souveraineté, contrairement à SecNumCloud</li>
-<li>HDS est du "droit mou" soumis a interprétation :</li>
-<li>HDS ne traite pas des systèmes intermédiaires entre l'utilisateur et le système qui stocke la donnée : offre PaaS sur sous-traitant hébergeur HDS, API Gateway...</li>
-<li>Lorsque l'application est développée en agile ou exploitée en interne, on peut considérer qu'il n'y a pas d'infogérance, donc pas d'infogérance HDS</li>
-</ul>
+<p>[À COMPLÉTER — préciser les interconnexions entre les plateformes cloud et l'infrastructure interne du MTE]</p>
 <hr />
 
 
