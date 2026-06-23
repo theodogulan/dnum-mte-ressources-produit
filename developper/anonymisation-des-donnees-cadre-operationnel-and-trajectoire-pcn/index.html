@@ -1,0 +1,5737 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Ressources, méthodes et bonnes pratiques de la Direction du Numérique (DNUM) du Ministère de la Transition Écologique (MTE).">
+      
+      
+        <meta name="author" content="DNUM du Ministère de la Transition Écologique">
+      
+      
+      
+        <link rel="prev" href="../tests-et-strategies/tests-de-performance/">
+      
+      
+        <link rel="next" href="../ci/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Anonymisation des données : cadre opérationnel & trajectoire PCN - Guide DNUM — Ministère de la Transition Écologique</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#anonymisation-des-donnees-cadre-operationnel-trajectoire-pcn" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="Guide DNUM — Ministère de la Transition Écologique" class="md-header__button md-logo" aria-label="Guide DNUM — Ministère de la Transition Écologique" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Guide DNUM — Ministère de la Transition Écologique
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Anonymisation des données : cadre opérationnel & trajectoire PCN
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Passer en mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Passer en mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Passer en mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passer en mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Guide DNUM — Ministère de la Transition Écologique" class="md-nav__button md-logo" aria-label="Guide DNUM — Ministère de la Transition Écologique" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Guide DNUM — Ministère de la Transition Écologique
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bienvenue
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cadrer
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cadrer
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/les-piliers-dune-organisation-produit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Piliers d’une organisation produit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/organisation-produit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organisation produit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/cycle-de-vie-produit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cycle de vie produit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/mvp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MVP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/cadre-organisationnel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comité produit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equipe produit
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Equipe produit
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/les-differents-roles-et-metiers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equipe produit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/les-differents-roles-et-metiers/responsable-metier/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Responsable métier (PM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/les-differents-roles-et-metiers/responsable-produit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Responsable produit (PO)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/les-differents-roles-et-metiers/expert-en-recherche-utilisateur/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Expert en Recherche Utilisateur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/les-differents-roles-et-metiers/responsable-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Responsable Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/les-differents-roles-et-metiers/designer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Designer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/les-differents-roles-et-metiers/developpeur/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Développeur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/les-differents-roles-et-metiers/coach-produit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coach produit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/les-differents-roles-et-metiers/devops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Expert Ops
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/les-differents-roles-et-metiers/expert-accessibilite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Expert accessibilité
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/le-fonctionnement-quotidien/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Au quotidien
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/la-check-list-de-lorganisation-produit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checklist produit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/vision-produit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision produit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/la-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/matrice-rice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Matrice RICE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/les-indicateurs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Indicateurs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/indicateurs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exemples d'indicateurs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/procedure-agrement-sig/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Procédure d’agrément SIG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concevoir
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Concevoir
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Démarche de design
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Démarche de design
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/concevoir/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Démarche de design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/concevoir/representer-son-produit-dans-les-en-tetes-des-sites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    En-têtes des sites
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/concevoir/ia-charte-dutilisation-responsable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IA - Charte d'utilisation responsable
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/ru/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recherche utilisateur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/parcours-utilisateur/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parcours utilisateur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/story-mapping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Story mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/accessibilite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accessibilité
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions et communs numériques
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solutions et communs numériques
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/communs-numeriques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions et communs numériques
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/communs-numeriques/rationalisation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Démarche de rationalisation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/communs-numeriques/communs-grist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/communs-numeriques/communs-cms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestion de contenus (CMS)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/communs-numeriques/communs-demarche-numerique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Démarche Numérique et Démat Social
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/communs-numeriques/communs-matomo-tracking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Matomo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/eco-conception/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Eco-conception
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Authentification des utilisateurs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Authentification des utilisateurs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/authentification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Authentification des utilisateurs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/authentification/authentification-proconnect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ProConnect
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/dossier-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dossier d'Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/data/postgresql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PostgreSQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/data/elasticsearch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ElasticSearch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/api/api-design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conception d'API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/api/api-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exposition d'API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/api/api-piste/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PISTE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/api/api-securite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sécurisation d'API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Développer
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Développer
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cadre de Cohérence Technique
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cadre de Cohérence Technique
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cct/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cadre de Cohérence Technique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cct/jdk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Standard JDK/JRE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../checklist-projet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checklist projet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Principes de développement
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Principes de développement
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../principes-de-developpement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Principes de développement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3_2" id="__nav_4_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clean Code
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Clean Code
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../principes-de-developpement/clean-code/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clean Code
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../principes-de-developpement/clean-code/clean-code-typescript/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clean Code (TypeScript)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../principes-de-developpement/open-source/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Open Source par défaut
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../principes-de-developpement/cloud-native/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application cloud native
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../principes-de-developpement/processus-asynchrones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Traitements asynchrones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../principes-de-developpement/gestion-des-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestion des accès
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../standards-techniques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Standards techniques
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Front web
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Front web
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../front-web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Front web
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../front-web/accessibilite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accessibilité
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../front-web/portages-dsfr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portages DSFR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../front-web/cartographie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cartographie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backend
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Backend
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backend
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backend/generation-pdf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Génération de PDF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stratégies de tests
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stratégies de tests
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tests-et-strategies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stratégies de tests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tests-et-strategies/tests-de-bout-en-bout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tests de bout en bout
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tests-et-strategies/tests-de-performance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tests de performance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anonymisation des données : cadre opérationnel & trajectoire PCN
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anonymisation des données : cadre opérationnel & trajectoire PCN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-objet-et-perimetre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Objet et périmètre
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-prerequis-ce-quil-faut-avoir-en-tete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Prérequis – Ce qu’il faut avoir en tête
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Prérequis – Ce qu’il faut avoir en tête">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-anonymisation-pseudonymisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Anonymisation ≠ pseudonymisation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-risques-a-eviter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Risques à éviter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Références
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-schema-simple-avant-apres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Schéma simple – Avant / Après
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-enjeux-dans-notre-contexte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Enjeux dans notre contexte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Enjeux dans notre contexte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-conformite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Conformité
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-approche-produit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Approche produit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-usages-legitimes-des-donnees-anonymisees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Usages légitimes des données anonymisées
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-constat-dnum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Constat DNUM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-principes-structurants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Principes structurants
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Principes structurants">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-minimiser-et-purger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Minimiser et purger
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-pas-de-donnees-personnelles-reelles-en-nonprod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Pas de données personnelles réelles en non‑prod
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-logs-et-traces-sans-donnees-personnelles-identifiables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Logs et traces sans données personnelles identifiables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-donnees-sensibles-a-anonymiser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Données sensibles à anonymiser
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-court-terme-ce-que-les-equipes-peuvent-faire-immediatement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Court terme – Ce que les équipes peuvent faire immédiatement
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Court terme – Ce que les équipes peuvent faire immédiatement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-a-approche-autonomie-produit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option A — Approche “autonomie produit”
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Option A — Approche “autonomie produit”">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Forces
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limites
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-b-sappuyer-sur-un-outil-existant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option B — S'appuyer sur un outil existant
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Option B — S&#39;appuyer sur un outil existant">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#greenmask" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Greenmask
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#postgresql-anonymizer-anon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PostgreSQL Anonymizer (anon)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forces_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Forces
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limites_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limites
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-moyen-terme-trois-trajectoires-possibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Moyen terme – Trois trajectoires possibles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Moyen terme – Trois trajectoires possibles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-trajectoire-socle-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Trajectoire “socle data”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-trajectoire-hebergement-infra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Trajectoire “hébergement / infra”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-trajectoire-studio-technique-commun" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Trajectoire “studio technique / commun”
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Trajectoire “studio technique / commun”">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forces-transverses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Forces transverses
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limites_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Activation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-acteurs-impliques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Acteurs impliqués
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Acteurs impliqués">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#equipe-produit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Équipe produit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hebergeur-infogerant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hébergeur / infogérant
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#responsable-de-traitement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Responsable de traitement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#referent-ssi-rgs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Référent SSI / RGS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equipe-daccompagnement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Équipe d’accompagnement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Conclusion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ci/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intégration continue (CI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Déploiement continu (CD)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../passation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Passation des projets internes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture-decision-record/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture Decision Records
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resolution-de-probleme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Résolution de problème
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Déployer
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Déployer
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hébergement
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hébergement
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployer/hebergement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hébergement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployer/hebergement/gestion-du-stockage-s3-chez-cegedim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestion du stockage S3 chez CEGEDIM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sécurité
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sécurité
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployer/securite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sécurité
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployer/securite/ebios-dict/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DICT (EBIOS)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployer/securite/anti-bots/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sécurité anti-bots
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployer/securite/antivirus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Antivirus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployer/securite/chiffrement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chiffrement des données
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Observabilité
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Observabilité
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployer/observabilite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Observabilité
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployer/observabilite/metriques-de-performance-applicative-apm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Métriques de performance applicative (APM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployer/observabilite/documentation-sentry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sentry
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conduite du changement
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Conduite du changement
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployer/conduire-le-changement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conduite du changement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployer/conduire-le-changement/communication-promotion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Communiquer et promouvoir
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployer/conduire-le-changement/formation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployer/conduire-le-changement/aide-au-demarrage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aide au démarrage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployer/conduire-le-changement/mesurer-la-satisfaction-avec-le-bouton-jdma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mesurer la satisfaction avec le bouton JDMA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployer/conduire-le-changement/support-utilisateur/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support utilisateur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Aide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Etre accompagné
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Etre accompagné
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aide/etre-accompagne/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Etre accompagné
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aide/etre-accompagne/accompagnement-technique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accompagnement technique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aide/contribuer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contribuer au guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-objet-et-perimetre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Objet et périmètre
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-prerequis-ce-quil-faut-avoir-en-tete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Prérequis – Ce qu’il faut avoir en tête
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Prérequis – Ce qu’il faut avoir en tête">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-anonymisation-pseudonymisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Anonymisation ≠ pseudonymisation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-risques-a-eviter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Risques à éviter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Références
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-schema-simple-avant-apres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Schéma simple – Avant / Après
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-enjeux-dans-notre-contexte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Enjeux dans notre contexte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Enjeux dans notre contexte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-conformite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Conformité
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-approche-produit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Approche produit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-usages-legitimes-des-donnees-anonymisees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Usages légitimes des données anonymisées
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-constat-dnum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Constat DNUM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-principes-structurants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Principes structurants
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Principes structurants">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-minimiser-et-purger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Minimiser et purger
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-pas-de-donnees-personnelles-reelles-en-nonprod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Pas de données personnelles réelles en non‑prod
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-logs-et-traces-sans-donnees-personnelles-identifiables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Logs et traces sans données personnelles identifiables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-donnees-sensibles-a-anonymiser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Données sensibles à anonymiser
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-court-terme-ce-que-les-equipes-peuvent-faire-immediatement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Court terme – Ce que les équipes peuvent faire immédiatement
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Court terme – Ce que les équipes peuvent faire immédiatement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-a-approche-autonomie-produit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option A — Approche “autonomie produit”
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Option A — Approche “autonomie produit”">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Forces
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limites
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-b-sappuyer-sur-un-outil-existant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option B — S'appuyer sur un outil existant
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Option B — S&#39;appuyer sur un outil existant">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#greenmask" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Greenmask
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#postgresql-anonymizer-anon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PostgreSQL Anonymizer (anon)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forces_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Forces
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limites_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limites
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-moyen-terme-trois-trajectoires-possibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Moyen terme – Trois trajectoires possibles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Moyen terme – Trois trajectoires possibles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-trajectoire-socle-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Trajectoire “socle data”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-trajectoire-hebergement-infra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Trajectoire “hébergement / infra”
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-trajectoire-studio-technique-commun" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Trajectoire “studio technique / commun”
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Trajectoire “studio technique / commun”">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forces-transverses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Forces transverses
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limites_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Activation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-acteurs-impliques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Acteurs impliqués
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Acteurs impliqués">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#equipe-produit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Équipe produit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hebergeur-infogerant" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hébergeur / infogérant
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#responsable-de-traitement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Responsable de traitement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#referent-ssi-rgs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Référent SSI / RGS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equipe-daccompagnement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Équipe d’accompagnement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Conclusion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="anonymisation-des-donnees-cadre-operationnel-trajectoire-pcn">Anonymisation des données : cadre opérationnel &amp; trajectoire PCN<a class="headerlink" href="#anonymisation-des-donnees-cadre-operationnel-trajectoire-pcn" title="Permanent link">&para;</a></h1>
+<h3 id="1-objet-et-perimetre"><strong>1. Objet et périmètre</strong><a class="headerlink" href="#1-objet-et-perimetre" title="Permanent link">&para;</a></h3>
+<p>Cette page couvre :</p>
+<ul>
+<li>l’anonymisation de données structurées en BDD (principalement PostgreSQL) ;</li>
+<li>les principes fondamentaux (RGPD, RGS) ;</li>
+<li>une trajectoire court terme <strong>réaliste et immédiatement mobilisable par les équipes produit</strong> ;</li>
+<li>des orientations moyen terme en cohérence avec la réorganisation et les capacités futures de l’organisation.</li>
+</ul>
+<p>Elle ne couvre pas (encore) :</p>
+<ul>
+<li>la pseudonymisation (mécanisme différent, réversible, toujours soumis au RGPD) ;</li>
+<li>l’anonymisation dans les logs applicatifs, fichiers, documents, ou flux d’échanges ;</li>
+<li>les aspects de sécurité opérationnelle (chiffrement, cloisonnements, habilitations).</li>
+</ul>
+<hr />
+<h3 id="2-prerequis-ce-quil-faut-avoir-en-tete"><strong>2. Prérequis – Ce qu’il faut avoir en tête</strong><a class="headerlink" href="#2-prerequis-ce-quil-faut-avoir-en-tete" title="Permanent link">&para;</a></h3>
+<h4 id="21-anonymisation-pseudonymisation"><strong>2.1 Anonymisation ≠ pseudonymisation</strong><a class="headerlink" href="#21-anonymisation-pseudonymisation" title="Permanent link">&para;</a></h4>
+<p>L’anonymisation vise à rendre impossible, en pratique et de manière irréversible, l’identification d’une personne. Lorsqu’elle est correctement réalisée, la donnée sort du champ RGPD.\
+La pseudonymisation, elle, remplace un identifiant par un alias, mais la ré‑identification reste possible via une clé séparée : <strong>le RGPD continue de s’appliquer</strong>.</p>
+<h4 id="22-risques-a-eviter"><strong>2.2 Risques à éviter</strong><a class="headerlink" href="#22-risques-a-eviter" title="Permanent link">&para;</a></h4>
+<p>Les trois risques classiques à maîtriser sont :</p>
+<ul>
+<li><strong>Individualisation</strong> : possibilité d’isoler une personne unique dans un jeu de données ;</li>
+<li><strong>Corrélation</strong> : possibilité de recroiser la donnée avec d’autres sources ;</li>
+<li><strong>Inférence</strong> : possibilité de déduire une information sensible à partir d’attributs restants.</li>
+</ul>
+<h4 id="23-references"><strong>2.3 Références</strong><a class="headerlink" href="#23-references" title="Permanent link">&para;</a></h4>
+<p><em>Lecture (en diagonale à minima) recommandée avant de poursuivre la lecture de la présente page.</em></p>
+<ul>
+<li><a href="https://www.cnil.fr/fr/technologies/lanonymisation-de-donnees-personnelles">CNIL — <em>Anonymisation de données</em></a></li>
+<li><a href="https://github.com/LINCnil/Guide-RGPD-du-developpeur/blob/main/07-Minimiser%20les%20donn%C3%A9es%20collect%C3%A9es.md">CNIL — <em>Guide RGPD du développeur</em> (fiche 7 : minimisation).</a></li>
+</ul>
+<hr />
+<h3 id="3-schema-simple-avant-apres"><strong>3. Schéma simple – Avant / Après</strong><a class="headerlink" href="#3-schema-simple-avant-apres" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>              ┌───────────────┐
+              │Collecte (prod)│
+              └──────┬────────┘
+                     │
+                     ▼
+             ┌────────────────────┐
+             │ Données réelles    │
+             │  (production)      │
+             └──────┬─────────────┘
+                     │
+                     ▼
+        ┌────────────────────────────┐
+        │ Anonymisation (règles +    │
+        │ génération d’un jeu dédié) │
+        └──────┬────────────┬────────┘
+               │            │
+               ▼            ▼
+     ┌────────────────┐   ┌─────────────────────────┐
+     │ Environnements │   │ Usages en production     │
+     │   non‑prod     │   │ (stats, BI, open data…) │
+     └────────────────┘   └─────────────────────────┘
+</code></pre></div>
+<hr />
+<h3 id="4-enjeux-dans-notre-contexte"><strong>4. Enjeux dans notre contexte</strong><a class="headerlink" href="#4-enjeux-dans-notre-contexte" title="Permanent link">&para;</a></h3>
+<h4 id="41-conformite"><strong>4.1 Conformité</strong><a class="headerlink" href="#41-conformite" title="Permanent link">&para;</a></h4>
+<p>Le RGPD impose minimisation, contrôle des accès, sécurité des traitements. Le RGS fournit une méthode d’analyse de risques et un cadre d’homologation.\
+L’anonymisation répond à un double besoin : réduire l’exposition aux risques et permettre des usages légitimes de données en non‑prod.</p>
+<h4 id="42-approche-produit"><strong>4.2 Approche produit</strong><a class="headerlink" href="#42-approche-produit" title="Permanent link">&para;</a></h4>
+<p>Les équipes produit doivent conserver une autonomie de mise en œuvre, surtout face à un existant hétérogène.\
+L’enjeu est de leur donner un <strong>cadre lisible</strong> et plusieurs trajectoires possibles, sans imposer un outil unique.</p>
+<h4 id="43-usages-legitimes-des-donnees-anonymisees"><strong>4.3 Usages légitimes des données anonymisées</strong><a class="headerlink" href="#43-usages-legitimes-des-donnees-anonymisees" title="Permanent link">&para;</a></h4>
+<p>Les données anonymisées peuvent être utilisées dans différents contextes (non exhaustifs) :</p>
+<ul>
+<li><strong>Hors production (</strong>&#x69;ntégration, préproduction, etc.) pour réaliser différents tests (fonctionnels, non régression, performance, etc.)</li>
+<li><strong>Diagnostic et support</strong> :</li>
+<li>reproduction de bugs</li>
+<li>analyses d’incidents,</li>
+<li>investigation fonctionnelle ou technique.</li>
+<li><strong>Usages en production</strong> :</li>
+<li>analyses statistiques internes,</li>
+<li>alimentation de tableaux de bord décisionnels,</li>
+<li>études ad hoc (ex. simulations, analyses transverses),</li>
+<li>publication en open data lorsque c’est pertinent.</li>
+</ul>
+<p>Ces usages reposent sur un <strong>jeu anonymisé distinct</strong> des données réelles, généré à partir des règles définies par l’équipe produit.</p>
+<hr />
+<h3 id="5-constat-dnum"><strong>5. Constat DNUM</strong><a class="headerlink" href="#5-constat-dnum" title="Permanent link">&para;</a></h3>
+<p>Le sujet de l’anonymisation s’inscrit dans un paysage technique varié, construit par strates successives. Cela se traduit par une pluralité de pratiques :</p>
+<ul>
+<li>un outil historique (DOT‑A) qui arrive aujourd’hui au terme de son cycle,</li>
+<li>des scripts spécifiques intégrés dans certains produits,</li>
+<li>la mise en place d'outils spécialisés (et parfois sous-exploités) dans d'autres produits,</li>
+<li>des opérations d’anonymisation réalisées au niveau hébergeur,</li>
+<li>et, dans certains cas, des besoins encore récents ou inexistants.</li>
+</ul>
+<p>La réorganisation en cours devrait faciliter une évolution vers une approche plus homogène, mais ce n’est pas le cas à court terme.</p>
+<p><strong>Conséquence :</strong>\
+La priorité est d’offrir aux équipes un <strong>cadre simple et immédiatement activable</strong>, sans attendre l’arrivée d’un socle mutualisé.</p>
+<hr />
+<h3 id="6-principes-structurants"><strong>6. Principes structurants</strong><a class="headerlink" href="#6-principes-structurants" title="Permanent link">&para;</a></h3>
+<h4 id="61-minimiser-et-purger"><strong>6.1 Minimiser et purger</strong><a class="headerlink" href="#61-minimiser-et-purger" title="Permanent link">&para;</a></h4>
+<p>Ne collecter que les données nécessaires, supprimer ce qui ne sert plus.\
+<a href="https://github.com/LINCnil/Guide-RGPD-du-developpeur/blob/main/07-Minimiser%20les%20donn%C3%A9es%20collect%C3%A9es.md">Pour aller plus loin</a></p>
+<h4 id="62-pas-de-donnees-personnelles-reelles-en-nonprod"><strong>6.2 Pas de données personnelles réelles en non‑prod</strong><a class="headerlink" href="#62-pas-de-donnees-personnelles-reelles-en-nonprod" title="Permanent link">&para;</a></h4>
+<p>Toute circulation vers non‑prod doit être <strong>anonymisée au préalable</strong>.</p>
+<h4 id="63-logs-et-traces-sans-donnees-personnelles-identifiables"><strong>6.3 Logs et traces sans données personnelles identifiables</strong><a class="headerlink" href="#63-logs-et-traces-sans-donnees-personnelles-identifiables" title="Permanent link">&para;</a></h4>
+<p>Limiter les logs aux identifiants techniques.\
+C’est un prérequis autant sécurité que conformité.</p>
+<h4 id="64-donnees-sensibles-a-anonymiser"><strong>6.4 Données sensibles à anonymiser</strong><a class="headerlink" href="#64-donnees-sensibles-a-anonymiser" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Identité : nom, prénom, identifiants.</li>
+<li>Coordonnées : email, téléphone, adresse.</li>
+<li>Données financières : IBAN, RIB.</li>
+<li>Données sensibles (santé, etc.) selon contexte.</li>
+<li>Données à fort pouvoir d’inférence : dates, localisation, identifiants indirects.</li>
+</ul>
+<p>Pour aller plus loin, <a href="https://github.com/LINCnil/Guide-RGPD-du-developpeur/blob/main/01-Identifier%20les%20donn%C3%A9es%20personnelles.md">identifier les données à caractères personnelles</a> (et donc sensibles)</p>
+<hr />
+<h2 id="7-court-terme-ce-que-les-equipes-peuvent-faire-immediatement"><strong>7. Court terme – Ce que les équipes peuvent faire immédiatement</strong><a class="headerlink" href="#7-court-terme-ce-que-les-equipes-peuvent-faire-immediatement" title="Permanent link">&para;</a></h2>
+<p>Objectif : rendre possible une anonymisation sur chaque projet, dès maintenant.\
+On cherche une solution réalisable, pas “la solution parfaite”.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>A<em>ssumer une solution imparfaite mais en place vaut mieux qu’une solution idéale jamais mise en œuvre</em>.</p>
+</div>
+<p>Si vous explorez une autre option à court terme, ✉️ parlons-en <em>(adresse de contact MTE à renseigner)</em> rapidement en amont : cela permettra de confirmer qu’elle est compatible avec notre environnement et, le cas échéant, d'enrichir cette documentation.</p>
+<hr />
+<h3 id="option-a-approche-autonomie-produit"><strong>Option A — Approche “autonomie produit”</strong><a class="headerlink" href="#option-a-approche-autonomie-produit" title="Permanent link">&para;</a></h3>
+<p>L’équipe met en place son anonymisation à l’aide de :</p>
+<ul>
+<li>scripts utilisant la stack existante du produit (<code>sh</code>, Python, java, node, etc.),</li>
+<li>ou anonymisation au niveau du code (Java, Node, etc.),</li>
+<li>exécutés sur un <strong>schéma de travail</strong> dans la base de production,</li>
+<li>puis diffusés en non‑prod selon les besoins.</li>
+</ul>
+<h4 id="forces">Forces<a class="headerlink" href="#forces" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Immédiatement actionnable.</li>
+<li>Compatible avec tous les projets, même legacy.</li>
+<li>Peu dépendant de l’hébergement.</li>
+</ul>
+<h4 id="limites">Limites<a class="headerlink" href="#limites" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Hétérogénéité d’un produit à l’autre.</li>
+<li>Faible traçabilité RGPD.</li>
+<li>Scalabilité limitée si volumes importants.</li>
+<li>Approche limitée en cas de besoins avancées (plusieurs dizaines de champs de tables différentes à anonymiser avec des règles différentes).</li>
+</ul>
+<hr />
+<h3 id="option-b-sappuyer-sur-un-outil-existant"><strong>Option B — S'appuyer sur un outil existant</strong><a class="headerlink" href="#option-b-sappuyer-sur-un-outil-existant" title="Permanent link">&para;</a></h3>
+<h4 id="greenmask">Greenmask<a class="headerlink" href="#greenmask" title="Permanent link">&para;</a></h4>
+<p>Dump → transformation → restore. Puissant, flexible.\
+⚠️ À cadrer avec l’hébergement (installation, dépendances, stockages).</p>
+<h4 id="postgresql-anonymizer-anon">PostgreSQL Anonymizer (<code>anon</code>)<a class="headerlink" href="#postgresql-anonymizer-anon" title="Permanent link">&para;</a></h4>
+<p>Masquage dynamique+statique au niveau base.\
+⚠️ Nécessite installation côté serveur PostgreSQL.</p>
+<h4 id="forces_1">Forces<a class="headerlink" href="#forces_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Approches plus techniques et plus propres.</li>
+<li>Potentiel de standardisation à moyen terme.</li>
+</ul>
+<h4 id="limites_1">Limites<a class="headerlink" href="#limites_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Besoin de coordination avec les hébergeurs.</li>
+<li>ROI à considérer puisque vous allez le porter au niveau produit (outil "overkill" pour anonymiser quelques champs de différentes tables)</li>
+<li>Pas activable partout immédiatement (<a href="../../aide/etre-accompagne/accompagnement-technique/">un accompagnement</a> peut être déclenchée pour faciliter la mise en œuvre dans votre contexte).</li>
+</ul>
+<hr />
+<h2 id="8-moyen-terme-trois-trajectoires-possibles"><strong>8. Moyen terme – Trois trajectoires possibles</strong><a class="headerlink" href="#8-moyen-terme-trois-trajectoires-possibles" title="Permanent link">&para;</a></h2>
+<p>Le moyen terme vise à réduire l’effort pour les produits et à apporter de la cohérence.\
+Ces trajectoires ne sont <strong>ni décidées ni engagées</strong> aujourd’hui : elles dépendent de priorisations futures.</p>
+<h3 id="1-trajectoire-socle-data"><strong>1. Trajectoire “socle data”</strong><a class="headerlink" href="#1-trajectoire-socle-data" title="Permanent link">&para;</a></h3>
+<p>Lorsqu’un socle data sera plus largement déployé, il pourrait accueillir une fonction d’anonymisation lors des flux d’alimentation ou des exports.</p>
+<h3 id="2-trajectoire-hebergement-infra"><strong>2. Trajectoire “hébergement / infra”</strong><a class="headerlink" href="#2-trajectoire-hebergement-infra" title="Permanent link">&para;</a></h3>
+<p>Certaines de nos offres d'hébergement pourraient intégrer l’anonymisation dans leurs routines (dump/restaure, pipelines).</p>
+<h3 id="3-trajectoire-studio-technique-commun"><strong>3. Trajectoire “studio technique / commun”</strong><a class="headerlink" href="#3-trajectoire-studio-technique-commun" title="Permanent link">&para;</a></h3>
+<p>Production d’un starter kit, d’un outillage plus robuste, ou d’une offre “clef en main” pour les produits.<br></p>
+<h4 id="forces-transverses">Forces transverses<a class="headerlink" href="#forces-transverses" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Mutualisation.</li>
+<li>Alignement organisationnel.</li>
+<li>Réduction du coût unitaire par produit.</li>
+</ul>
+<h4 id="limites_2">Limites<a class="headerlink" href="#limites_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Ressources limitées.</li>
+<li>Pas d’échéance réaliste à ce stade.</li>
+</ul>
+<h4 id="activation">Activation<a class="headerlink" href="#activation" title="Permanent link">&para;</a></h4>
+<p>Les projets en tension (délais, volumes, risques) doivent <strong>remonter</strong> leur besoin pour arbitrage.</p>
+<hr />
+<h2 id="9-acteurs-impliques"><strong>9. Acteurs impliqués</strong><a class="headerlink" href="#9-acteurs-impliques" title="Permanent link">&para;</a></h2>
+<h4 id="equipe-produit"><strong>Équipe produit</strong><a class="headerlink" href="#equipe-produit" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Identifie les données sensibles ;</li>
+<li>Choisit la solution court terme qui lui convient ;</li>
+<li>Met en place, exécute et valide l’anonymisation ;</li>
+<li>Documente a minima.</li>
+</ul>
+<h4 id="hebergeur-infogerant"><strong>Hébergeur / infogérant</strong><a class="headerlink" href="#hebergeur-infogerant" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Fournit les capacités techniques nécessaires (dump, restore, droits sur schéma de travail) ;</li>
+<li>Peut exécuter certaines manipulations si demandé.</li>
+</ul>
+<h4 id="responsable-de-traitement"><strong>Responsable de traitement</strong><a class="headerlink" href="#responsable-de-traitement" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Valide les finalités d’usage des données anonymisées ;</li>
+<li>Peut demander des précisions sur les risques résiduels.</li>
+</ul>
+<h4 id="referent-ssi-rgs"><strong>Référent SSI / RGS</strong><a class="headerlink" href="#referent-ssi-rgs" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Vérifie la cohérence sécurité, la minimisation des risques, les habilitations ;</li>
+<li>Aide à interpréter les obligations RGPD/RGS.</li>
+</ul>
+<h4 id="equipe-daccompagnement"><strong>Équipe d’accompagnement</strong><a class="headerlink" href="#equipe-daccompagnement" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Soutient les équipes dans le choix de la trajectoire (script, code, outil) ;</li>
+<li>Peut <strong>prendre la décision</strong> sur demande de l’équipe produit (ex. difficulté technique, incertitude, manque de ressources) ;</li>
+<li>Assure la cohérence globale.</li>
+</ul>
+<hr />
+<h3 id="10-conclusion"><strong>10. Conclusion</strong><a class="headerlink" href="#10-conclusion" title="Permanent link">&para;</a></h3>
+<p>Cette page propose une trajectoire <strong>réaliste, progressive et adaptée</strong> à la diversité de nos produits et à la maturité actuelle de l’organisation.</p>
+<ul>
+<li><strong>Court terme</strong> : une solution simple, autonome, “qui marche”.</li>
+<li><strong>Moyen terme</strong> : plusieurs chemins possibles, à prioriser.</li>
+<li><strong>Cap général</strong> : ne pas laisser circuler de données personnelles réelles hors production, et avancer même si la solution n’est pas idéale.</li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.top", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

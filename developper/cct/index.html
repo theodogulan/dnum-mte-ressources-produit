@@ -1,0 +1,5270 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Ressources, méthodes et bonnes pratiques de la Direction du Numérique (DNUM) du Ministère de la Transition Écologique (MTE).">
+      
+      
+        <meta name="author" content="DNUM du Ministère de la Transition Écologique">
+      
+      
+      
+        <link rel="prev" href="../../concevoir/api/api-securite/">
+      
+      
+        <link rel="next" href="jdk/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Cadre de Cohérence Technique - Guide DNUM — Ministère de la Transition Écologique</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cadre-de-coherence-technique" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="Guide DNUM — Ministère de la Transition Écologique" class="md-header__button md-logo" aria-label="Guide DNUM — Ministère de la Transition Écologique" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Guide DNUM — Ministère de la Transition Écologique
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cadre de Cohérence Technique
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Passer en mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Passer en mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Passer en mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passer en mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Guide DNUM — Ministère de la Transition Écologique" class="md-nav__button md-logo" aria-label="Guide DNUM — Ministère de la Transition Écologique" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Guide DNUM — Ministère de la Transition Écologique
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bienvenue
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cadrer
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cadrer
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/les-piliers-dune-organisation-produit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Piliers d’une organisation produit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/organisation-produit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Organisation produit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/cycle-de-vie-produit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cycle de vie produit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/mvp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MVP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/cadre-organisationnel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comité produit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equipe produit
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Equipe produit
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/les-differents-roles-et-metiers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equipe produit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/les-differents-roles-et-metiers/responsable-metier/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Responsable métier (PM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/les-differents-roles-et-metiers/responsable-produit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Responsable produit (PO)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/les-differents-roles-et-metiers/expert-en-recherche-utilisateur/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Expert en Recherche Utilisateur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/les-differents-roles-et-metiers/responsable-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Responsable Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/les-differents-roles-et-metiers/designer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Designer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/les-differents-roles-et-metiers/developpeur/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Développeur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/les-differents-roles-et-metiers/coach-produit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coach produit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/les-differents-roles-et-metiers/devops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Expert Ops
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/les-differents-roles-et-metiers/expert-accessibilite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Expert accessibilité
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/le-fonctionnement-quotidien/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Au quotidien
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/la-check-list-de-lorganisation-produit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checklist produit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/vision-produit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vision produit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/la-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/matrice-rice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Matrice RICE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/les-indicateurs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Indicateurs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/indicateurs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exemples d'indicateurs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cadrer/procedure-agrement-sig/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Procédure d’agrément SIG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Concevoir
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Concevoir
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Démarche de design
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Démarche de design
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/concevoir/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Démarche de design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/concevoir/representer-son-produit-dans-les-en-tetes-des-sites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    En-têtes des sites
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/concevoir/ia-charte-dutilisation-responsable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IA - Charte d'utilisation responsable
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/ru/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recherche utilisateur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/parcours-utilisateur/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parcours utilisateur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/story-mapping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Story mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/accessibilite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accessibilité
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions et communs numériques
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solutions et communs numériques
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/communs-numeriques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions et communs numériques
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/communs-numeriques/rationalisation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Démarche de rationalisation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/communs-numeriques/communs-grist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/communs-numeriques/communs-cms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestion de contenus (CMS)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/communs-numeriques/communs-demarche-numerique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Démarche Numérique et Démat Social
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/communs-numeriques/communs-matomo-tracking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Matomo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/eco-conception/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Eco-conception
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Authentification des utilisateurs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Authentification des utilisateurs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/authentification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Authentification des utilisateurs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/authentification/authentification-proconnect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ProConnect
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/dossier-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dossier d'Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/data/postgresql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PostgreSQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/data/elasticsearch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ElasticSearch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/api/api-design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conception d'API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/api/api-gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exposition d'API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/api/api-piste/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PISTE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concevoir/api/api-securite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sécurisation d'API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Développer
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Développer
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cadre de Cohérence Technique
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cadre de Cohérence Technique
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cadre de Cohérence Technique
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cadre de Cohérence Technique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#caractere-du-referentiel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caractère du référentiel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-lisibilite-et-comprehension-du-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Lisibilité et compréhension du code
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-architecture-et-structure-du-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Architecture et structure du code
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-base-de-donnees-et-persistance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Base de données et persistance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-securite-applicative" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Sécurité applicative
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-fiabilite-et-resilience" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Fiabilité et résilience
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-performance-et-efficacite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Performance et efficacité
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-tests-et-qualite-logicielle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Tests et qualité logicielle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-analyse-statique-et-outillage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Analyse statique et outillage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-deploiement-et-conteneurisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Déploiement et conteneurisation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-optimisation-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Optimisation front‑end
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-collaboration-et-maintenabilite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Collaboration et maintenabilité
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-conformite-et-reglementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Conformité et réglementation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-technologies-recommandees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Technologies recommandées
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Technologies recommandées">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stack-nodejsreact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stack Node.js/React
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stack-javaspring-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stack Java/Spring Boot
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="jdk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Standard JDK/JRE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../checklist-projet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Checklist projet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Principes de développement
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Principes de développement
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../principes-de-developpement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Principes de développement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3_2" id="__nav_4_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clean Code
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Clean Code
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../principes-de-developpement/clean-code/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clean Code
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../principes-de-developpement/clean-code/clean-code-typescript/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clean Code (TypeScript)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../principes-de-developpement/open-source/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Open Source par défaut
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../principes-de-developpement/cloud-native/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application cloud native
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../principes-de-developpement/processus-asynchrones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Traitements asynchrones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../principes-de-developpement/gestion-des-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestion des accès
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../standards-techniques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Standards techniques
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Front web
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Front web
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../front-web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Front web
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../front-web/accessibilite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accessibilité
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../front-web/portages-dsfr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portages DSFR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../front-web/cartographie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cartographie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backend
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Backend
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backend
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backend/generation-pdf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Génération de PDF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stratégies de tests
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stratégies de tests
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tests-et-strategies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stratégies de tests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tests-et-strategies/tests-de-bout-en-bout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tests de bout en bout
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tests-et-strategies/tests-de-performance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tests de performance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../anonymisation-des-donnees-cadre-operationnel-and-trajectoire-pcn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anonymisation des données : cadre opérationnel & trajectoire PCN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ci/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intégration continue (CI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Déploiement continu (CD)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../passation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Passation des projets internes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture-decision-record/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture Decision Records
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resolution-de-probleme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Résolution de problème
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Déployer
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Déployer
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hébergement
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hébergement
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployer/hebergement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hébergement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployer/hebergement/gestion-du-stockage-s3-chez-cegedim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestion du stockage S3 chez CEGEDIM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sécurité
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sécurité
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployer/securite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sécurité
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployer/securite/ebios-dict/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DICT (EBIOS)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployer/securite/anti-bots/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sécurité anti-bots
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployer/securite/antivirus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Antivirus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployer/securite/chiffrement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chiffrement des données
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Observabilité
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Observabilité
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployer/observabilite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Observabilité
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployer/observabilite/metriques-de-performance-applicative-apm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Métriques de performance applicative (APM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployer/observabilite/documentation-sentry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sentry
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conduite du changement
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Conduite du changement
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployer/conduire-le-changement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conduite du changement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployer/conduire-le-changement/communication-promotion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Communiquer et promouvoir
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployer/conduire-le-changement/formation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployer/conduire-le-changement/aide-au-demarrage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aide au démarrage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployer/conduire-le-changement/mesurer-la-satisfaction-avec-le-bouton-jdma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mesurer la satisfaction avec le bouton JDMA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deployer/conduire-le-changement/support-utilisateur/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support utilisateur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Aide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Etre accompagné
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Etre accompagné
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aide/etre-accompagne/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Etre accompagné
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aide/etre-accompagne/accompagnement-technique/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accompagnement technique
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aide/contribuer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contribuer au guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#caractere-du-referentiel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caractère du référentiel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-lisibilite-et-comprehension-du-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Lisibilité et compréhension du code
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-architecture-et-structure-du-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Architecture et structure du code
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-base-de-donnees-et-persistance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Base de données et persistance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-securite-applicative" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Sécurité applicative
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-fiabilite-et-resilience" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Fiabilité et résilience
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-performance-et-efficacite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Performance et efficacité
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-tests-et-qualite-logicielle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Tests et qualité logicielle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-analyse-statique-et-outillage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Analyse statique et outillage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-deploiement-et-conteneurisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Déploiement et conteneurisation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-optimisation-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Optimisation front‑end
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-collaboration-et-maintenabilite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Collaboration et maintenabilité
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-conformite-et-reglementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Conformité et réglementation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-technologies-recommandees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Technologies recommandées
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Technologies recommandées">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stack-nodejsreact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stack Node.js/React
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stack-javaspring-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stack Java/Spring Boot
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="cadre-de-coherence-technique">Cadre de Cohérence Technique<a class="headerlink" href="#cadre-de-coherence-technique" title="Permanent link">&para;</a></h1>
+<h2 id="caractere-du-referentiel">Caractère du référentiel<a class="headerlink" href="#caractere-du-referentiel" title="Permanent link">&para;</a></h2>
+<p>Ces exigences constituent un <strong>cadre de cohérence technique obligatoire</strong> pour garantir :</p>
+<ul>
+<li>La sécurité et la confidentialité des données</li>
+<li>La conformité aux obligations légales (RGPD, RGAA, RGS, souveraineté numérique)</li>
+<li>La maintenabilité et la pérennité des applications</li>
+<li>La qualité de service aux usagers</li>
+</ul>
+<p>Chaque critère fournit un cadre opérationnel à appliquer lors de la conception, du développement, de la revue et du déploiement.</p>
+<p>Les critères documentés sont fortement conseillés. Une dérogation est possible si justifiée et documentée.</p>
+<h2 id="1-lisibilite-et-comprehension-du-code">1. Lisibilité et compréhension du code<a class="headerlink" href="#1-lisibilite-et-comprehension-du-code" title="Permanent link">&para;</a></h2>
+<p>Favoriser une compréhension rapide et homogène du code, sans règles lourdes, en appliquant les principes fondamentaux du clean code.</p>
+<ul>
+<li><strong>Nommage expressif</strong> : Utiliser des noms explicites et cohérents (mots métier quand pertinent), éviter les abréviations obscures et centraliser les valeurs « magiques » dans des constantes pour rendre l'intention immédiatement visible en revue de code. Les noms de fonctions doivent être des verbes d'action clairs, les noms de classes des noms substantifs, et les booléens doivent être des questions posées (ex: <code>isValid</code>, <code>hasPermission</code>). Éviter les noms génériques (<code>data</code>, <code>temp</code>, <code>obj</code>) qui masquent l'intention réelle. Éviter les préfixes inutiles (ex: <code>strName</code>, <code>intAge</code>) qui n'apportent pas de valeur et nuisent à la lisibilité.</li>
+<li><strong>Principes DRY (Don't Repeat Yourself) et KISS (Keep It Simple, Stupid)</strong> : Éliminer la duplication de code en extrayant les logiques communes dans des fonctions/classes réutilisables, tout en évitant la sur-abstraction prématurée (YAGNI - You Aren't Gonna Need It). Préférer la simplicité explicite à la complexité implicite ; si une solution complexe n'apporte pas de bénéfice mesurable, choisir la solution la plus simple qui fonctionne.</li>
+<li><strong>Fonctions et responsabilités uniques</strong> : Écrire des fonctions courtes (≤ 50 lignes idéalement, max 100) centrées sur une responsabilité unique (Single Responsibility Principle), maintenir une profondeur d'imbrication ≤ 4 niveaux et éviter les « objets dieux » (&gt; 500 lignes ou &gt; 10 méthodes publiques) en scindant les rôles en composants simples et cohérents. Chaque fonction doit faire une seule chose et la faire bien, avec un niveau d'abstraction uniforme. Préférer peu d'arguments (idéalement ≤ 3) : si une fonction a trop de paramètres, elle fait probablement trop de choses. Utiliser des objets de paramètres pour regrouper les arguments liés. Éviter les flags (booléens) dans les paramètres : préférer deux fonctions claires plutôt qu'une fonction avec un booléen pour améliorer la lisibilité. Éviter les effets de bord cachés : une fonction ne doit pas modifier des variables globales ou des paramètres d'entrée sans que cela soit explicite dans son nom et sa signature.</li>
+<li><strong>Complexité maîtrisée</strong> : Viser une complexité cyclomatique ≤ 10 par fonction en privilégiant des structures simples (early return, guard clauses, boucles claires) et un flux top‑down lisible afin de limiter la charge cognitive ; refactoriser systématiquement au-delà de ce seuil. Utiliser des techniques de réduction de complexité : extraction de méthodes, composition d'objets, remplacement de conditions par stratégies. Préférer la composition aux chaînes de if/else : utiliser des objets de configuration et des fonctions spécialisées plutôt que des chaînes de conditions interminables pour améliorer la lisibilité et la maintenabilité. Encapsuler les conditions limites : centraliser la gestion des cas particuliers dans des fonctions dédiées plutôt que de les éparpiller dans le code, facilitant ainsi la maintenance et la compréhension. Préférer les conditions positives pour améliorer la lisibilité : éviter les conditions négatives au profit de conditions positives quand possible.</li>
+<li><strong>Code auto-documenté</strong> : Écrire du code qui exprime clairement son intention sans nécessiter de commentaires pour comprendre le « quoi ». Le code doit être lisible comme une prose claire. Documenter uniquement le « pourquoi » via des commentaires concis lorsqu'une décision technique ou métier non évidente nécessite une explication. Éviter les commentaires redondants qui répètent ce que le code fait déjà.</li>
+<li><strong>Documentation des APIs publiques</strong> : Fournir une documentation structurée des APIs publiques (exemples d'usage, paramètres, retours, exceptions, pré/post-conditions) avec génération automatique via des outils adaptés au langage utilisé et maintien synchronisé avec le code. Les contrats d'interface doivent être clairs et explicites.</li>
+</ul>
+<h2 id="2-architecture-et-structure-du-code">2. Architecture et structure du code<a class="headerlink" href="#2-architecture-et-structure-du-code" title="Permanent link">&para;</a></h2>
+<p>Structurer de façon simple et stable afin de faciliter l'évolution à coût maîtrisé.</p>
+<ul>
+<li><strong>Séparation des responsabilités</strong> : Organiser une arborescence claire avec séparation des couches (présentation, métier, données) et des modules cohérents/autonomes pour faciliter la navigation et les changements localisés. Appliquer le principe de dépendance inversée (Dependency Inversion Principle) : les couches hautes ne doivent pas dépendre des couches basses, mais des abstractions communes.</li>
+<li><strong>Principes SOLID</strong> :</li>
+<li><strong>Single Responsibility Principle (SRP)</strong> : Chaque classe/module doit avoir une seule raison d'être. Une classe ne doit gérer qu'un seul aspect de la fonctionnalité.</li>
+<li><strong>Open/Closed Principle (OCP)</strong> : Les entités doivent être ouvertes à l'extension mais fermées à la modification. Utiliser la composition ou les mécanismes d'extension propres au langage pour étendre sans modifier le code existant.</li>
+<li><strong>Liskov Substitution Principle (LSP)</strong> : Les objets d'un type parent doivent pouvoir être remplacés par des instances de leurs types dérivés sans casser le comportement attendu.</li>
+<li><strong>Interface Segregation Principle (ISP)</strong> : Ne pas forcer les classes à implémenter des interfaces qu'elles n'utilisent pas. Créer des interfaces spécifiques et ciblées plutôt que des interfaces « god ».</li>
+<li><strong>Dependency Inversion Principle (DIP)</strong> : Quand possible, dépendre des abstractions (interfaces) plutôt que des implémentations concrètes. Les modules de haut niveau ne doivent pas dépendre des modules de bas niveau.</li>
+<li><strong>Principes Domain-Driven Design (DDD)</strong> : Structurer le code autour du domaine métier pour améliorer la compréhension et la maintenabilité du code.</li>
+<li><strong>Langage omniprésent (Ubiquitous Language)</strong> : Utiliser systématiquement le vocabulaire métier dans le code, les conversations et la documentation. Les termes techniques doivent correspondre exactement aux concepts métier, favorisant une communication claire entre développeurs et experts métier.</li>
+<li><strong>Contexte borné (Bounded Context)</strong> : Délimiter clairement les frontières des modèles de domaine. Chaque contexte borné possède son propre modèle de domaine et son vocabulaire, évitant ainsi les ambiguïtés et les conflits de sens entre différents domaines.</li>
+<li><strong>Entités et objets de valeur</strong> : Distinguer les entités (objets identifiés par leur identité, même si leurs attributs changent) des objets de valeur (objets définis uniquement par leurs attributs, immutables et interchangeables). Les entités représentent des concepts métier avec un cycle de vie, tandis que les objets de valeur encapsulent des concepts métier sans identité propre.</li>
+<li><strong>Agrégats (Aggregates)</strong> : Regrouper des entités et objets de valeur en agrégats avec une racine d'agrégat qui garantit l'intégrité et la cohérence des invariants métier. Les agrégats délimitent les frontières de transaction et de cohérence, simplifiant ainsi la gestion des modifications et la persistance.</li>
+<li><strong>Services de domaine (Domain Services)</strong> : Identifier les opérations métier qui ne s'appartiennent naturellement ni à une entité ni à un objet de valeur. Ces services encapsulent des règles métier qui nécessitent la collaboration de plusieurs objets du domaine.</li>
+<li><strong>Repositories (Repositories)</strong> : Abstraire la persistance et l'accès aux données via des interfaces exprimées dans le langage du domaine. Les repositories masquent les détails techniques de la persistance et permettent de raisonner en termes métier lors de la récupération et de la sauvegarde des agrégats.</li>
+<li><strong>Événements de domaine (Domain Events)</strong> : Modéliser les événements significatifs qui se produisent dans le domaine métier. Ces événements permettent de découpler les parties du système et de synchroniser les différents contextes bornés ou les systèmes externes.</li>
+<li><strong>Couche anti-corruption (Anti-Corruption Layer)</strong> : Isoler le domaine métier des systèmes externes ou des contextes voisins en créant une couche de traduction qui transforme les modèles externes en modèles du domaine, préservant l'intégrité du modèle métier.</li>
+<li><strong>Patterns et abstractions pragmatiques</strong> : Appliquer des patterns simples et consistants ; n'introduire des abstractions (interfaces, ports/adapters) que lorsqu'elles apportent un bénéfice concret (testabilité, évolutivité, réduction du couplage). Éviter la sur-ingénierie : ne pas créer d'abstractions « au cas où » (YAGNI), mais uniquement quand le besoin réel est identifié. <strong>Préférence pour les objets de valeur</strong> : Plutôt que de manipuler des types primitifs partout, créer des objets de valeur pour encapsuler la logique métier et améliorer la sémantique du code. Un objet de valeur représente un concept métier avec ses opérations associées plutôt que d'utiliser des variables primitives séparées.</li>
+<li><strong>Encapsulation des détails internes</strong> : Exposer seulement ce qui est nécessaire pour l'utilisation du module. Cacher les détails d'implémentation et les fonctions internes pour maintenir une interface claire et stable. Ne pas exposer les fonctions internes qui doivent rester privées au module.</li>
+<li><strong>Couplage faible et cohésion forte</strong> : Maintenir un couplage faible entre modules et une cohésion forte au sein des modules. La cohésion mesure la force de la relation entre les éléments d'un module : viser une cohésion fonctionnelle (tous les éléments contribuent à une seule fonction) ou séquentielle (sortie d'un élément = entrée du suivant). Détecter et éviter les cycles de dépendances via des outils automatisés avec échec CI si cycles détectés, afin de simplifier les refactorings et éviter la dégradation progressive. <strong>Loi de Déméter</strong> : Une fonction ne doit connaître que ses dépendances directes, pas les dépendances de ses dépendances. Éviter les chaînes d'appels profondes et préférer des fonctions dédiées ou des méthodes déléguées pour améliorer le couplage et la maintenabilité.</li>
+<li><strong>Configuration et versionnement</strong> : Externaliser configuration et secrets par environnement avec validation de schéma au démarrage ; stabiliser et versionner les APIs exposées (sémantique majeur.mineur.patch) avec dépréciation progressive (warnings, délai d'adaptation) pour limiter les ruptures contractuelles et maintenir la compatibilité ascendante.</li>
+<li><strong>Documentation architecturale</strong> : Documenter l'architecture via des diagrammes C4 (Context, Container, Component, Code) maintenus à jour pour les décisions structurantes, facilitant l'onboarding et les évolutions majeures.</li>
+<li><strong>Structure du code source</strong> : Regrouper verticalement ce qui est lié : les concepts liés doivent être proches dans le code pour faciliter la compréhension. Déclarer les variables près de leur usage : réduire la portée des variables au minimum nécessaire pour améliorer la lisibilité et éviter les erreurs. Préférer l'immutabilité quand le langage le permet et éviter les déclarations de variables en début de fonction si elles ne sont utilisées que plus tard.</li>
+</ul>
+<h2 id="3-base-de-donnees-et-persistance">3. Base de données et persistance<a class="headerlink" href="#3-base-de-donnees-et-persistance" title="Permanent link">&para;</a></h2>
+<p>Assurer une persistance fiable avec des choix simples adaptés au volume et aux usages.</p>
+<ul>
+<li>Pas de NoSQL : définir des contraintes d'intégrité explicites (PK, FK, UNIQUE, CHECK) et créer des index sur les requêtes fréquentes en analysant les query plans, avec une revue périodique (trimestrielle) pour éviter les index inutiles ou redondants ; monitorer les requêtes lentes (&gt; 100ms) avec des outils dédiés (pg_stat_statements, MySQL slow query log, APM).</li>
+<li>Utiliser un ORM pour la plupart des requêtes ; utiliser systématiquement des requêtes préparées/paramétrées pour prévenir les injections SQL, éviter SELECT * en sélectionnant explicitement les colonnes nécessaires, et prévenir N+1 via jointures ou chargements adaptés (eager/lazy) selon le besoin de données réel ; logger et analyser les requêtes générées par l'ORM en développement.</li>
+<li>Gérer des migrations versionnées, réversibles et idempotentes (Flyway, Liquibase, TypeORM migrations, Alembic), testées sur des échantillons réalistes et des copies de production anonymisées ; maintenir des schémas rigoureusement alignés entre tous les environnements et interdire les modifications manuelles de schéma.</li>
+<li>Définir une politique de transactions explicite : utiliser les niveaux d'isolation appropriés, gérer les rollbacks automatiques sur erreur, et limiter la durée des transactions pour éviter les locks prolongés.</li>
+<li>Classifier les données selon leur sensibilité (publiques, internes, confidentielles, sensibles/personnelles) et appliquer des mesures de protection graduées : les données sensibles doivent être chiffrées au repos au niveau colonne (AES-256 minimum) ; pseudonymiser ou anonymiser systématiquement les données personnelles dans les environnements de développement et test.</li>
+<li>Mettre en place un masquage automatique des données sensibles dans les logs, messages d'erreur et interfaces de débogage ; interdire l'accès direct aux données de production depuis les environnements de développement, sauf demande explicite et tracée, et mettre en place des mécanismes d'audit pour tout accès aux données sensibles.</li>
+<li>Chiffrer les échanges (TLS en transit) et les données sensibles au repos (chiffrement au niveau colonne si nécessaire), utiliser des comptes à privilèges minimaux avec rotation régulière (trimestrielle minimum) des identifiants ; réaliser des sauvegardes automatiques périodiques (quotidiennes pour prod) avec tests de restauration mensuels et conservation selon politique définie.</li>
+</ul>
+<h2 id="4-securite-applicative">4. Sécurité applicative<a class="headerlink" href="#4-securite-applicative" title="Permanent link">&para;</a></h2>
+<p>Mettre en place des protections de base efficaces, adaptées à l'exposition du service.</p>
+<ul>
+<li>Mettre en place une authentification robuste (OAuth2/OIDC, JWT avec rotation, sessions sécurisées) avec politique de mots de passe forte (longueur minimale 12 caractères, complexité, sans rotation forcée selon NIST) et MFA obligatoire pour les comptes administrateurs ; gérer correctement les sessions (durées adaptées, invalidation explicite, protection contre fixation) ainsi que des contrôles d'accès côté serveur fondés sur le moindre privilège (RBAC ou ABAC).</li>
+<li>Valider systématiquement toutes les entrées (whitelist plutôt que blacklist, validation de type et format), encoder les sorties selon le contexte (HTML, JS, URL, SQL), activer les protections essentielles (anti-XSS, tokens CSRF, sanitization), et utiliser des bibliothèques éprouvées (DOMPurify, OWASP libraries) ; servir exclusivement en HTTPS sur tous les environnements publics avec redirections automatiques.</li>
+<li>Gérer les secrets via variables d'environnement/coffre et proscrire tout secret en clair dans le code, la configuration et les journaux.</li>
+<li>Activer les en-têtes de sécurité essentiels (Content-Security-Policy strict, X-Frame-Options: DENY, X-Content-Type-Options: nosniff, Strict-Transport-Security avec preload, Referrer-Policy: strict-origin-when-cross-origin), une politique CORS restrictive (whitelist explicite des origines autorisées) et un rate limiting adapté (par IP, par endpoint, par utilisateur) pour réduire l'exposition aux attaques automatisées et DDoS.</li>
+<li>Mettre en place une matrice d'habilitations régulièrement auditée : documenter qui a accès à quoi, avec quel niveau de privilège et pour quelle durée ; implémenter une revue trimestrielle des accès avec révocation des comptes inactifs et traçabilité des modifications d'habilitations.</li>
+<li>Maintenir un inventaire des dépendances tierces avec scan automatique de vulnérabilités (Snyk, OWASP Dependency-Check) et application rapide des patches de sécurité (sous 48h pour vulnérabilités critiques).</li>
+</ul>
+<h2 id="5-fiabilite-et-resilience">5. Fiabilité et résilience<a class="headerlink" href="#5-fiabilite-et-resilience" title="Permanent link">&para;</a></h2>
+<p>Viser une fiabilité raisonnable avec des mécanismes simples à opérer.</p>
+<ul>
+<li>Mettre en place un logging structuré pour tracer les événements métiers critiques et faciliter le diagnostic :</li>
+<li>Utiliser un format JSON en déploiement et un format lisible en local pour faciliter le développement.</li>
+<li>Tracer systématiquement les événements métiers critiques : authentifications (réussies/échouées avec la cause), toutes les actions de consultation/modification/suppression de données, et autres opérations sensibles.</li>
+<li>Inclure dans chaque ligne de log un request_id (généré côté front pour les requêtes utilisateur, par un autre micro-service ou par un middleware côté back pour les appels API directs), ainsi que le chemin du fichier et le numéro de ligne pour faciliter le débogage.</li>
+<li>Logger les tracebacks originaux en les capturant avant toute transformation par des blocs try/catch, afin de conserver la stack trace complète.</li>
+<li>Configurer les access logs du serveur web/reverse proxy (ex. Nginx, Traefik) en deux lignes : une première avec méthode HTTP, URL, referrer, headers (en nettoyant le header d'authentification), une seconde avec les mêmes informations plus la durée de la requête.</li>
+<li>Mettre en place un wrapper unifiant log et remontée vers Sentry pour les niveaux &gt;= ERROR : chaque action de logging doit créer une ligne de log locale et envoyer l'information vers Sentry (avec tout le contexte : request_id, stack trace, variables d'environnement pertinentes) afin de centraliser le suivi des erreurs critiques.</li>
+<li><strong>Gestion des erreurs</strong> : Séparer la logique métier de la gestion des erreurs : ne pas mélanger la logique principale avec la gestion des erreurs. Utiliser des exceptions plutôt que des codes d'erreur : les exceptions sont plus expressives et plus faciles à gérer que les codes d'erreur retournés. Ajouter du contexte aux exceptions : les messages d'erreur doivent être informatifs et inclure le contexte nécessaire pour comprendre et résoudre le problème plutôt que des messages génériques. Éviter les valeurs nulles pour les concepts métier : utiliser des valeurs explicites plutôt que des valeurs nulles pour représenter des concepts métier, selon les mécanismes disponibles dans le langage utilisé.</li>
+<li>Définir des timeouts explicites pour toutes les opérations I/O (appels API, BDD, services externes) avec valeurs adaptées au contexte (ex: 5s pour API synchrone, 30s pour opérations lourdes) ; implémenter des retries avec backoff exponentiel (ex: 3 tentatives max avec délais 1s, 2s, 4s) et jitter pour éviter les retry storms ; mettre en place des circuit breakers pour isoler les services défaillants et éviter la propagation de pannes.</li>
+<li>Prévoir une dégradation gracieuse (fallback sur cache, fonctionnalité réduite, messages utilisateur explicites) pour éviter les pannes totales et maintenir une expérience utilisateur acceptable même en mode dégradé.</li>
+<li>Exposer des health checks distincts (liveness pour redémarrage, readiness pour traffic) avec vérification des dépendances critiques (BDD, services externes) ; collecter et exposer des métriques essentielles (taux d'erreur, latence p50/p95/p99, throughput) avec des dashboards opérationnels. Définir des SLO (Service Level Objectives) mesurables (ex: 99.9% uptime, p95 &lt; 500ms) et des SLI (Service Level Indicators) pour les suivre.</li>
+<li>Déclencher des alertes progressives : warnings pour déviations mineures, critiques pour incidents majeurs avec escalade automatique si non traité ; éviter le sur-alerting en définissant des seuils pertinents et en regroupant les alertes corrélées.</li>
+<li>Réaliser des sauvegardes périodiques et tester la restauration afin d'assurer un redémarrage maîtrisé en cas d'incident.</li>
+</ul>
+<h2 id="6-performance-et-efficacite">6. Performance et efficacité<a class="headerlink" href="#6-performance-et-efficacite" title="Permanent link">&para;</a></h2>
+<p>Optimiser les ressources serveur et client par des pratiques techniques ciblées pour éviter les goulets d'étranglement courants.</p>
+<ul>
+<li>Mesurer systématiquement avec des outils d'APM (ex. Sentry Performance Monitoring, Elastic APM, Tempo) avant de se lancer dans des optimisations : profiler les opérations critiques (temps de réponse, requêtes lentes, utilisation mémoire) pour identifier les vrais goulets d'étranglement et valider les gains après refactoring, en évitant les optimisations prématurées. Définir des budgets de performance par endpoint (ex: API &lt; 200ms p95, pages &lt; 1s LCP) avec monitoring continu.</li>
+<li>Éviter les problèmes de requêtes N+1 en utilisant des jointures appropriées, des eager loading ou des batch loads selon l'ORM/framework utilisé (TypeORM/Prisma pour Node/TypeScript avec relations/findMany include, JPA/Hibernate pour Spring Boot avec @EntityGraph ou FetchType.EAGER), et en analysant les requêtes SQL générées pour détecter les patterns problématiques.</li>
+<li>Implémenter la pagination au niveau SQL (LIMIT/OFFSET ou curseurs) plutôt qu'en mémoire dans le backend, et à fortiori jamais côté frontend : charger uniquement les données nécessaires à la page demandée et transmettre les métadonnées de pagination (total, page courante) pour une navigation efficace.</li>
+<li>Sélectionner explicitement les colonnes nécessaires (éviter SELECT *), analyser les plans d'exécution pour détecter les scans complets de table, et créer des index adaptés aux patterns de requêtes fréquentes (composite indexes pour WHERE multi-colonnes, couvrant pour éviter les lookups).</li>
+<li>Ajouter un cache simple et ciblé sur les points chauds identifiés (données lues fréquemment, résultats de calculs coûteux) avec une stratégie d'expiration explicite (TTL adapté au contexte) et des mécanismes d'invalidation adaptés (event-driven, write-through, cache-aside) ; utiliser Redis/ioredis pour Node/TypeScript ou Spring Cache avec Redis/Caffeine pour Java/Spring Boot. Monitorer le hit ratio du cache (objectif &gt; 80%) et ajuster la stratégie si nécessaire.</li>
+<li>Configurer un connection pooling approprié pour la base de données (taille min/max adaptée à la charge, timeout de connexion, idle timeout) et les clients HTTP pour les services externes afin d'éviter l'overhead de création de connexions répétées.</li>
+<li>Activer la compression des réponses HTTP (gzip, brotli) pour les contenus textuels (JSON, HTML, CSS, JS) avec seuils appropriés (&gt; 1KB) ; utiliser HTTP/2 ou HTTP/3 quand possible pour réduire la latence.</li>
+<li>Optimiser côté client : maîtriser la taille des bundles (code splitting, tree-shaking), activer le lazy-loading des ressources lourdes et optimiser les images (formats modernes, compression) pour améliorer les temps de chargement perçus.</li>
+<li>Prévoir une architecture scalable (composants stateless, équilibrage de charge, scaling horizontal) lorsque la charge ou la criticité l'exige, avec monitoring pour déclencher les actions de scale.</li>
+</ul>
+<h2 id="7-tests-et-qualite-logicielle">7. Tests et qualité logicielle<a class="headerlink" href="#7-tests-et-qualite-logicielle" title="Permanent link">&para;</a></h2>
+<p>Assurer une couverture de tests rigoureuse pour garantir la fiabilité et éviter les régressions, en appliquant les principes du clean code pour les tests (Clean Code Tests).</p>
+<ul>
+<li><strong>Pyramide des tests et stratégie</strong> : Appliquer la pyramide des tests (unitaires, tests d'intégration, tests E2E) pour équilibrer vitesse d'exécution et confiance ; viser une couverture ≥ 90% sur le code partagé, la logique métier et l'authentification avec des tests unitaires rapides (&lt; 10ms par test) et isolés. Ces zones critiques doivent être exhaustivement testées (scénarios nominaux, cas limites, cas d'erreur) avec des frameworks adaptés au langage et à l'écosystème technique utilisé.</li>
+<li><strong>Clean Code pour les tests</strong> :</li>
+<li><strong>Tests clairs et expressifs</strong> : Les tests doivent être lisibles comme une documentation vivante. Utiliser des noms de tests descriptifs qui expliquent le comportement testé plutôt que des noms génériques. Suivre le pattern Arrange-Act-Assert (AAA) ou Given-When-Then pour structurer les tests de manière claire.</li>
+<li><strong>Un seul concept par test</strong> : Chaque test doit vérifier une seule chose. Éviter les tests qui vérifient plusieurs comportements à la fois, ce qui rend difficile l'identification de la cause d'un échec.</li>
+<li><strong>Tests rapides et indépendants</strong> : Les tests unitaires doivent être rapides (&lt; 10ms) et ne pas dépendre les uns des autres. Ils doivent pouvoir s'exécuter dans n'importe quel ordre et être isolés (pas de dépendances partagées, pas d'état global).</li>
+<li><strong>FIRST principles</strong> : Les tests doivent être <strong>Fast</strong> (rapides), <strong>Independent</strong> (indépendants), <strong>Repeatable</strong> (répétables), <strong>Self-Validating</strong> (auto-vérifiants avec des assertions claires), <strong>Timely</strong> (écrits au bon moment, idéalement avant le code - TDD).</li>
+<li><strong>Tests de non-régression</strong> : Mettre en place des tests de non-régression complets couvrant les parcours utilisateurs principaux, les scénarios d'intégration entre composants et les cas d'usage métiers critiques, avec une exécution automatique en CI pour détecter rapidement les régressions.</li>
+<li><strong>Tests d'intégration</strong> : Écrire des tests d'intégration couvrant les interactions avec les APIs, la base de données et les services tiers, en utilisant des environnements de test isolés et reproductibles (Docker, Testcontainers) avec données de test cohérentes. Utiliser des fixtures réutilisables et des factories pour créer des données de test de manière maintenable.</li>
+<li><strong>Tests E2E</strong> : Mettre en place des tests E2E critiques (Playwright, Cypress) sur les parcours métiers essentiels, exécutés sur environnements staging pré-production ; maintenir ces tests stables (&lt; 5% de flakiness) avec stratégies de retry intelligentes et isolation des tests. Garder le nombre de tests E2E limité et ciblés sur les parcours critiques pour maintenir leur maintenabilité.</li>
+<li><strong>Sécurité et dépendances</strong> : Intégrer des analyses SAST et des scans de dépendances dans la CI, pour détecter tôt les failles de sécurité et les bibliothèques vulnérables.</li>
+<li><strong>Tests de charge</strong> : Réaliser des tests de charge (k6 recommandé pour sa simplicité et scriptabilité JS) sur les scénarios sensibles à la performance pour prévenir les régressions : définir des seuils acceptables (throughput, latence p95, taux d'erreur) et faire échouer la CI si dépassement. Exécuter des tests de charge complets en pré-production pour valider la scalabilité.</li>
+</ul>
+<h2 id="8-analyse-statique-et-outillage">8. Analyse statique et outillage<a class="headerlink" href="#8-analyse-statique-et-outillage" title="Permanent link">&para;</a></h2>
+<p>Mettre en place des garde‑fous automatisés pour maintenir la qualité et détecter précocement les problèmes, en intégrant des métriques de clean code et des détections automatiques de code smells.</p>
+<ul>
+<li><strong>Linting et formatage</strong> : Configurer des linters avec des règles adaptées au langage et faire échouer la CI de façon systématique sur les erreurs bloquantes (formatage, sécurité, bonnes pratiques) ; les avertissements doivent être traités progressivement mais ne bloquent pas le déploiement. Mettre en place des hooks pre-commit pour appliquer automatiquement le formatage et bloquer les commits non conformes. Configurer des règles spécifiques pour détecter les violations de clean code (noms génériques, fonctions trop longues, complexité excessive).</li>
+<li><strong>Métriques de clean code</strong> :</li>
+<li><strong>Complexité cyclomatique</strong> : Maintenir une complexité cyclomatique ≤ 10 par fonction (15 maximum acceptable) avec alertes automatiques en cas de dépassement. Utiliser des outils d'analyse (SonarQube, CodeClimate) pour suivre cette métrique et identifier les fonctions à refactoriser.</li>
+<li><strong>Duplication de code</strong> : Maintenir une duplication de code ≤ 3% avec détection automatique des blocs dupliqués. Identifier et extraire les patterns répétitifs en fonctions réutilisables.</li>
+<li><strong>Couverture de tests</strong> : Viser une couverture ≥ 90% sur le code critique avec monitoring continu. Les outils doivent identifier les zones non couvertes et alerter en cas de baisse de couverture.</li>
+<li><strong>Longueur des fonctions/classes</strong> : Détecter automatiquement les fonctions &gt; 100 lignes et les classes &gt; 500 lignes ou avec &gt; 10 méthodes publiques (code smells « God Object ») avec alertes en CI.</li>
+<li><strong>Profondeur d'imbrication</strong> : Détecter les blocs avec une profondeur d'imbrication &gt; 4 niveaux et suggérer des refactorings (extraction de méthodes, early returns).</li>
+<li><strong>Paramètres de fonctions</strong> : Alerter sur les fonctions avec &gt; 5 paramètres et suggérer l'introduction de paramètres d'objets (refactoring « Introduce Parameter Object »).</li>
+<li><strong>Vérification stricte des types et code mort</strong> : Activer la vérification stricte des types quand le langage le permet et éliminer régulièrement le code mort via des outils automatisés adaptés au langage utilisé.</li>
+<li><strong>Détection de code smells</strong> : Configurer des outils d'analyse de code pour détecter automatiquement les code smells courants :</li>
+<li>Longue méthodes</li>
+<li>Classes trop grandes (God Object)</li>
+<li>Duplication de code</li>
+<li>Paramètres trop nombreux</li>
+<li>Dépendances circulaires</li>
+<li>Noms génériques ou non expressifs</li>
+<li>Commentaires morts ou code commenté</li>
+<li><strong>Sécurité et dépendances</strong> : Intégrer un scan automatisé des dépendances via des outils adaptés au gestionnaire de dépendances utilisé et des secrets dans la CI avec échec sur vulnérabilités critiques ; suivre les métriques de qualité (couverture de tests, duplication de code) avec des alertes sur dérive.</li>
+<li><strong>Analyses SAST</strong> : Configurer des analyses SAST (SonarQube, CodeQL, Semgrep) pour détecter les vulnérabilités et failles de sécurité dans le code, avec rapports CI lisibles et intégration dans le workflow de revue. Exécuter ces analyses à chaque commit/PR ; planifier des revues qualité hebdomadaires ou mensuelles selon la criticité du projet.</li>
+<li><strong>Documentation des suppressions</strong> : Documenter les suppressions justifiées de warnings/erreurs via commentaires inline avec référence au ticket associé ; réviser périodiquement ces suppressions pour éviter l'accumulation de dette technique masquée. Mettre en place un processus de revue trimestrielle des suppressions pour identifier celles qui peuvent être corrigées.</li>
+<li><strong>Rapports de qualité</strong> : Produire des rapports de qualité automatisés avec tendances historiques et générer des alertes en cas de dérive notable pour concentrer l'effort correctif là où il est le plus utile. Les rapports doivent inclure les métriques de clean code (complexité, duplication, longueur des fonctions/classes) avec des visualisations claires et des recommandations d'actions.</li>
+</ul>
+<h2 id="9-deploiement-et-conteneurisation">9. Déploiement et conteneurisation<a class="headerlink" href="#9-deploiement-et-conteneurisation" title="Permanent link">&para;</a></h2>
+<p>Standardiser et sécuriser le build et le déploiement via une automatisation fiable et reproductible.</p>
+<ul>
+<li>Construire des images Docker optimisées (multi‑stage pour réduire la taille, .dockerignore pour exclure les fichiers inutiles) et exécuter systématiquement les conteneurs en utilisateur non‑root avec des privilèges minimaux ; scanner les images pour vulnérabilités (Trivy, Clair) avant déploiement. Appliquer l'immutabilité : interdire les modifications in-place, versionner avec tags sémantiques + SHA de commit, conserver les N dernières versions pour rollback rapide.</li>
+<li>Mettre en place un pipeline CI/CD complet qui automatise build, tests, analyse de sécurité et déploiement, avec des étapes conditionnelles selon l'environnement et une capacité de rollback rapide et testée en cas d'incident ; versionner les configurations de déploiement (Helm charts, Terraform, etc.). Maintenir une parité maximale entre environnements (dev, staging, production) et tester systématiquement migrations et déploiements en staging avant production.</li>
+<li>Définir une stratégie de déploiement adaptée au contexte. Configurer des health checks (liveness, readiness, startup probes) et définir explicitement resource limits et requests (CPU, mémoire) pour éviter les saturations et OOM.</li>
+<li>Centraliser les journaux applicatifs et système via des outils dédiés (ELK, Loki, CloudWatch) et collecter des métriques essentielles (CPU, mémoire, latence, taux d'erreur) avec des dashboards opérationnels pour une visibilité en temps réel.</li>
+<li>Gérer les secrets de façon sécurisée via des variables d'environnement chiffrées ou un coffre (Vault) .</li>
+</ul>
+<h2 id="10-optimisation-frontend">10. Optimisation front‑end<a class="headerlink" href="#10-optimisation-frontend" title="Permanent link">&para;</a></h2>
+<p>Optimiser le front pour garantir une expérience utilisateur fluide et sécurisée.</p>
+<ul>
+<li>Maîtriser la taille des bundles via code splitting intelligent (par route, par fonctionnalité), minification et tree-shaking, en limitant les dépendances volumineuses et en utilisant des alternatives légères quand possible ; analyser régulièrement la composition des bundles (webpack-bundle-analyzer, source-map-explorer pour React/Webpack et Angular) pour identifier les opportunités d'optimisation. Définir des budgets de performance en CI (taille max des bundles) avec échec automatique en cas de dépassement.</li>
+<li>Activer le lazy‑loading systématique pour les ressources lourdes (images, composants non critiques, données) et optimiser les images avec des formats modernes (WebP, AVIF) et une compression appropriée ; implémenter le responsive images (srcset, sizes) pour adapter la charge selon les devices. Prioriser le critical path : CSS critique inline, preload des fonts critiques, skeleton screens pour chargements longs.</li>
+<li>Mesurer et monitorer les Core Web Vitals en continu : LCP (Largest Contentful Paint) &lt; 2.5s, FID (First Input Delay) &lt; 100ms, CLS (Cumulative Layout Shift) &lt; 0.1. Mettre en place un monitoring RUM (Real User Monitoring) pour mesurer les performances réelles en production et configurer des alertes automatiques sur dégradation.</li>
+<li>Implémenter une stratégie de cache HTTP efficace (assets immutables avec hash de contenu, cache busting) et utiliser un CDN pour les ressources statiques. Évaluer l'intérêt des Service Workers pour offline-first ou amélioration des performances selon le contexte applicatif.</li>
+<li>Respecter strictement un HTML sémantique (balises appropriées, structure hiérarchique), fournir des métadonnées complètes (Open Graph, Twitter Cards, meta description) et utiliser les attributs ARIA de façon appropriée pour une accessibilité fiable ; tester régulièrement avec des lecteurs d'écran et des outils automatisés.</li>
+<li>Combiner les tests E2E et accessibilité RGAA via Playwright + @axe-core/playwright ou playwright-lighthouse pour valider simultanément le fonctionnement et la conformité sur les parcours critiques.</li>
+<li>Appliquer une Content Security Policy (CSP) stricte avec whitelisting des sources autorisées et configurer des cookies sécurisés (HttpOnly, Secure, SameSite) ; servir systématiquement l'application en HTTPS sur tous les environnements publics avec HSTS activé.</li>
+</ul>
+<h2 id="11-collaboration-et-maintenabilite">11. Collaboration et maintenabilité<a class="headerlink" href="#11-collaboration-et-maintenabilite" title="Permanent link">&para;</a></h2>
+<p>Encadrer les pratiques d'équipe pour favoriser la pérennité et la transmission de connaissances, en appliquant les principes du clean code pour la maintenabilité et le refactoring continu.</p>
+<ul>
+<li><strong>Documentation maintenue</strong> : Maintenir une documentation à jour et accessible : README complet avec instructions d'installation/déploiement, documentation des APIs (OpenAPI/Swagger), diagrammes d'architecture pour les décisions clés, et changelog régulier pour suivre l'évolution ; la documentation doit être revue et mise à jour lors des changements majeurs. Maintenir des ADR (Architecture Decision Records) pour toutes les décisions architecturales majeures, avec contexte, options considérées, décision prise et conséquences anticipées.</li>
+<li><strong>Revue de code et collaboration</strong> : Pratiquer systématiquement la revue de code avec au moins un relecteur pour chaque PR, des conventions de branches (GitFlow, GitHub Flow) et de commits standardisées (Conventional Commits) pour garder un historique clair, des PRs descriptives avec contexte et tests associés. Créer et maintenir un glossaire métier partagé (termes métiers et techniques) versionné avec le code. Les revues de code doivent vérifier non seulement la fonctionnalité mais aussi l'application des principes de clean code (nommage, simplicité, testabilité).</li>
+<li><strong>Refactoring continu</strong> :</li>
+<li><strong>Boy Scout Rule</strong> : Laisser le code dans un meilleur état qu'on ne l'a trouvé. Chaque modification doit améliorer légèrement la qualité du code, même si ce n'est pas l'objectif principal de la tâche.</li>
+<li><strong>Refactoring par petites étapes</strong> : Refactoriser régulièrement par petites étapes plutôt que par grandes réécritures. Chaque refactoring doit être accompagné de tests pour garantir qu'aucune régression n'est introduite.</li>
+<li><strong>Dette technique maîtrisée</strong> : Éviter l'accumulation de dette technique en refactorisant au fur et à mesure. Quand une dette technique est identifiée, la documenter et la planifier dans le backlog avec une estimation d'effort. Ne pas laisser s'accumuler les « quick fixes » et les « workarounds » qui deviennent des problèmes structurels.</li>
+<li><strong>Code smells et refactoring</strong> : Identifier et corriger les code smells courants (longue méthodes, classes trop grandes, duplication, paramètres trop nombreux, dépendances circulaires) via des refactorings ciblés (extraction de méthodes, extraction de classes, introduction de paramètres d'objets, etc.).</li>
+<li><strong>Gestion des dépendances</strong> : Gérer activement les dépendances : appliquer immédiatement les security patches, planifier mensuellement les mises à jour mineures et trimestriellement les majeures ; automatiser avec dependabot/renovate en conservant une revue humaine systématique.</li>
+<li><strong>Partage de connaissances</strong> : Limiter le bus factor par partage systématique des connaissances critiques : sessions régulières de knowledge sharing (démos, tech talks), documentation d'onboarding complète avec checklist, rotation des responsabilités sur les composants sensibles. Organiser des sessions de code review collective et de pair programming pour partager les bonnes pratiques de clean code.</li>
+<li><strong>Gestion des tickets et dette technique</strong> : Tenir un suivi rigoureux des tickets (bugs, features, améliorations) avec priorités, échéances et statuts à jour ; tracer les dettes techniques dans un backlog dédié avec planification et estimation d'effort pour leur résolution progressive. Allouer régulièrement du temps (ex: 10-20% du temps de développement) pour le refactoring et l'amélioration continue.</li>
+<li><strong>Post-mortems et apprentissage</strong> : Conduire des post-mortems blameless après chaque incident majeur : analyse des causes racines, actions correctives documentées, partage public si pertinent pour favoriser la transparence et l'apprentissage collectif.</li>
+<li><strong>Licences et contributions</strong> : Documenter explicitement les licences de tous les composants (code source, dépendances) et fournir un guide de contribution clair si le dépôt est partagé ou ouvert, avec une politique de sécurité (déclaration de vulnérabilités) et un code de conduite pour encadrer les contributions. Le guide de contribution doit inclure les standards de clean code attendus dans le projet.</li>
+</ul>
+<h2 id="12-conformite-et-reglementation">12. Conformité et réglementation<a class="headerlink" href="#12-conformite-et-reglementation" title="Permanent link">&para;</a></h2>
+<p>Respecter rigoureusement les obligations légales et sectorielles applicables aux services publics numériques français.</p>
+<ul>
+<li>RGPD : implémenter des mécanismes complets et vérifiables de consentement éclairé, de droit à l'oubli (suppression effective des données dans tous les systèmes et backups), de portabilité (export dans un format structuré standard) et de rectification, avec traitement des demandes dans les délais légaux (maximum 1 mois) et traçabilité des actions réalisées. Maintenir un registre des traitements à jour (Article 30 RGPD).</li>
+<li>Gestion des incidents RGPD : définir et tester une procédure de notification CNIL sous 72h en cas de violation de données, avec notification des personnes concernées si risque élevé ; préparer un template de notification prêt à l'emploi et désigner les responsables de la chaîne d'alerte.</li>
+<li>Sous-traitance et tiers : établir des DPA (Data Processing Agreement) obligatoires avec tous les sous-traitants traitant des données personnelles, incluant clauses de réversibilité et portabilité ; auditer périodiquement les sous-traitants sur leurs pratiques de sécurité et conformité.</li>
+<li>Accessibilité RGAA : viser systématiquement le niveau AA à 100% de conformité, en combinant tests automatisés réguliers (axe-core, lighthouse, WAVE). Voir la page dédiée pour plus de détails.</li>
+<li>Traçabilité réglementaire : mettre en place une journalisation exhaustive des opérations sensibles (authentifications, accès aux données personnelles, modifications critiques) avec horodatage fiable, conservation selon les durées légales et possibilité d'audit ; définir et communiquer une politique de conservation claire avec procédures de purge documentées.</li>
+<li>RGS (Référentiel Général de Sécurité) : voir la politique de sécurité du ministère.</li>
+<li>Archivage légal : implémenter un système d'archivage à valeur probante pour les documents et données soumis à obligations légales de conservation (signature électronique qualifiée, horodatage qualifié, empreintes cryptographiques SHA-256 minimum) ; respecter les durées de conservation selon le Code du patrimoine (5 ans minimum pour archives publiques) et les textes sectoriels applicables.</li>
+<li>Open data : pour les données publiques réutilisables, prévoir dès la conception leur extraction et publication en formats ouverts (CSV, JSON, XML) conformément à la loi pour une République numérique et au Code des relations entre le public et l'administration ; documenter les métadonnées selon le standard DCAT-AP et publier sur data.gouv.fr ou portail sectoriel approprié.</li>
+<li>Formation et sensibilisation : organiser une formation RGPD obligatoire pour toute l'équipe (renouvellement annuel) et une sensibilisation continue à la sécurité (phishing tests, newsletters, retours d'expérience sur incidents) pour maintenir une culture de vigilance.</li>
+</ul>
+<h2 id="13-technologies-recommandees">13. Technologies recommandées<a class="headerlink" href="#13-technologies-recommandees" title="Permanent link">&para;</a></h2>
+<p>Ce cadre technique recommande les stacks <strong>Node.js/React (TypeScript)</strong> et <strong>Java/Spring Boot</strong> comme stacks de référence pour tous les nouveaux projets de développement d'applications web. Ces stacks sont préconisées car elles offrent une forte agilité, une productivité élevée et un écosystème moderne adapté au développement rapide d'applications web.</p>
+<p>Le choix entre les deux stacks se fait par la DNUM.</p>
+<h3 id="stack-nodejsreact">Stack Node.js/React<a class="headerlink" href="#stack-nodejsreact" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Catégorie</th>
+<th>Technologies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Runtime/Langage</strong></td>
+<td><p>Node.js (LTS, version 22 minimum)<br>TypeScript (version 5+ avec configuration stricte)</p></td>
+</tr>
+<tr>
+<td><strong>Framework Backend</strong></td>
+<td>Hono (typage et validation des routes partagés via client RPC)</td>
+</tr>
+<tr>
+<td><strong>Base de données</strong></td>
+<td><p>PostgreSQL avec Prisma<br>Migrations de base de données via l'ORM</p></td>
+</tr>
+<tr>
+<td><strong>Validation</strong></td>
+<td>Zod ou class-validator</td>
+</tr>
+<tr>
+<td><strong>Authentification</strong></td>
+<td>ProConnect (OAuth2/OIDC) / JWT</td>
+</tr>
+<tr>
+<td><strong>Documentation API</strong></td>
+<td>OpenAPI/Swagger automatique</td>
+</tr>
+<tr>
+<td><strong>Tests backend</strong></td>
+<td>Vitest (TU), Supertest et Testcontainers (TI)</td>
+</tr>
+<tr>
+<td><strong>Linting/Analyse</strong></td>
+<td>ESLint (règles TypeScript strictes), Prettier, Biome</td>
+</tr>
+<tr>
+<td><strong>Framework Frontend</strong></td>
+<td>React 18+ avec TypeScript ou Next.js 14+ pour le SSR/SSG</td>
+</tr>
+<tr>
+<td><strong>État Frontend</strong></td>
+<td><p>TanStack Query (React.js)<br>Pinia (Vue.js)</p></td>
+</tr>
+<tr>
+<td><strong>Styling Frontend</strong></td>
+<td><p>DSFR, via <a href="https://github.com/codegouvfr/react-dsfr">lib react-ds</a><br>Tailwind CSS ou CSS Modules avec approche utility-first</p></td>
+</tr>
+<tr>
+<td><strong>Tests Frontend</strong></td>
+<td><p>Vitest + React Testing Library pour les tests unitaires<br>Playwright pour les tests E2E</p></td>
+</tr>
+<tr>
+<td><strong>Build Frontend</strong></td>
+<td><p>Vite ou Next.js (React - préconisé)<br>Vite</p></td>
+</tr>
+<tr>
+<td><strong>Dépendances</strong></td>
+<td>Yarn</td>
+</tr>
+<tr>
+<td><strong>CI/CD</strong></td>
+<td>PIC interne (Gitlab)</td>
+</tr>
+<tr>
+<td><strong>Conteneurisation</strong></td>
+<td>Docker avec images multi-stages optimisées basées sur Node.js slim</td>
+</tr>
+<tr>
+<td><strong>Monitoring</strong></td>
+<td>Sentry (Erreurs et APM), Outil pour les logs</td>
+</tr>
+<tr>
+<td><strong>Logging</strong></td>
+<td>Pino</td>
+</tr>
+</tbody>
+</table>
+<h3 id="stack-javaspring-boot">Stack Java/Spring Boot<a class="headerlink" href="#stack-javaspring-boot" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Catégorie</th>
+<th>Technologies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Langage</strong></td>
+<td><p>Java 25+, <a href="cct/jdk/">Temurin</a> (LTS)<br>avec records, pattern matching, virtual threads</p></td>
+</tr>
+<tr>
+<td><strong>Framework Backend</strong></td>
+<td><p>Spring Boot 3.x+ avec Spring Framework 6.x+<br>Architecture en couches via Spring Data et Spring Security</p></td>
+</tr>
+<tr>
+<td><strong>Base de données</strong></td>
+<td><p>PostgreSQL avec Spring Data JPA et Hibernate comme ORM<br>Liquibase pour les migrations de base de données</p></td>
+</tr>
+<tr>
+<td><strong>Validation</strong></td>
+<td>Bean Validation (Jakarta Validation) avec annotations</td>
+</tr>
+<tr>
+<td><strong>Authentification</strong></td>
+<td><p>Spring Security avec ProConnect (OAuth2/OIDC) et JWT pour les APIs stateless<br>JWT dans les cookies</p></td>
+</tr>
+<tr>
+<td><strong>Documentation API</strong></td>
+<td>SpringDoc OpenAPI (Swagger) pour la documentation automatique des APIs REST</td>
+</tr>
+<tr>
+<td><strong>Tests</strong></td>
+<td><p>JUnit 5 et Mockito<br>Spring Boot Test avec @SpringBootTest<br>Testcontainers pour les tests avec base de données réelle</p></td>
+</tr>
+<tr>
+<td><strong>Linting/Analyse</strong></td>
+<td>Checkstyle, PMD, SpotBugs pour la détection de code smells et vulnérabilités</td>
+</tr>
+<tr>
+<td><strong>Framework Frontend</strong></td>
+<td>Angular avec TypeScript</td>
+</tr>
+<tr>
+<td><strong>État Frontend</strong></td>
+<td>Signals Angular (gestion réactive moderne) et Services Angular</td>
+</tr>
+<tr>
+<td><strong>Styling Frontend</strong></td>
+<td><p>DSFR via <a href="https://www.npmjs.com/package/@edugouvfr/ngx-dsfr">lib ngx-dsfr</a><br>Tailwind CSS</p></td>
+</tr>
+<tr>
+<td><strong>Tests Frontend</strong></td>
+<td><p>Jest ou Jasmine + Karma pour les tests unitaires<br>Playwright pour les tests E2E</p></td>
+</tr>
+<tr>
+<td><strong>Build Frontend</strong></td>
+<td>Angular CLI (build intégré)</td>
+</tr>
+<tr>
+<td><strong>Dépendances/Build</strong></td>
+<td>Gradle avec wrapper pour garantir la version</td>
+</tr>
+<tr>
+<td><strong>CI/CD</strong></td>
+<td>PIC interne (GitLab CI)</td>
+</tr>
+<tr>
+<td><strong>Conteneurisation</strong></td>
+<td>Docker avec images multi-stages optimisées basées sur OpenJDK Alpine</td>
+</tr>
+<tr>
+<td><strong>Monitoring</strong></td>
+<td>Sentry (Erreurs et APM), Outil pour les logs</td>
+</tr>
+<tr>
+<td><strong>Logging</strong></td>
+<td>Logback ou Log4j2 avec SLF4J pour le logging structuré (format JSON en production)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.top", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
