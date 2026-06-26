@@ -4,6 +4,36 @@
    ========================================================================= */
 
 /* -------------------------------------------------------------------------
+   Bloc-marque de l'État (signature typographique DSFR) — page d'accueil
+   Nom du ministère en capitales + filet + devise, à la façon du .fr-logo.
+   ------------------------------------------------------------------------- */
+.bloc-marque {
+  display: inline-block;
+  padding: 0.9rem 1.2rem;
+  margin-bottom: 1.8rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 2px;
+  line-height: 1.18;
+}
+.bloc-marque__nom {
+  display: block;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.92rem;
+  letter-spacing: 0.01em;
+  color: var(--md-default-fg-color);
+}
+.bloc-marque__devise {
+  display: block;
+  margin-top: 0.55rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+  font-style: italic;
+  font-size: 0.72rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* -------------------------------------------------------------------------
    P2 — Police Marianne (officielle, self-hostée depuis le paquet DSFR)
    ------------------------------------------------------------------------- */
 @font-face {
