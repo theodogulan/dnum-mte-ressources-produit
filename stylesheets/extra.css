@@ -4,33 +4,19 @@
    ========================================================================= */
 
 /* -------------------------------------------------------------------------
-   Bloc-marque de l'État (signature typographique DSFR) — page d'accueil
-   Nom du ministère en capitales + filet + devise, à la façon du .fr-logo.
+   Bloc-marque officiel du ministère (image) — page d'accueil
    ------------------------------------------------------------------------- */
-.bloc-marque {
-  display: inline-block;
-  padding: 0.9rem 1.2rem;
-  margin-bottom: 1.8rem;
-  border: 1px solid var(--md-default-fg-color--lighter);
-  border-radius: 2px;
-  line-height: 1.18;
-}
-.bloc-marque__nom {
+.logo-mte {
   display: block;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 0.92rem;
-  letter-spacing: 0.01em;
-  color: var(--md-default-fg-color);
+  height: auto;
+  margin: 0.2rem 0 1.8rem;
 }
-.bloc-marque__devise {
-  display: block;
-  margin-top: 0.55rem;
-  padding-top: 0.5rem;
-  border-top: 1px solid var(--md-default-fg-color--lightest);
-  font-style: italic;
-  font-size: 0.72rem;
-  color: var(--md-default-fg-color--light);
+/* Le logo est en noir sur fond transparent : en mode sombre, on lui adjoint
+   un fond blanc pour qu'il reste lisible (conforme aux usages de la charte). */
+[data-md-color-scheme="slate"] .logo-mte {
+  background-color: #ffffff;
+  padding: 0.8rem 1rem;
+  border-radius: 4px;
 }
 
 /* -------------------------------------------------------------------------
